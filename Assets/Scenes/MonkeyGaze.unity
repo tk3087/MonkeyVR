@@ -5988,6 +5988,7 @@ MonoBehaviour:
   yScale: 0
   xOffset: 0
   yOffset: 0
+  sbPacket: 
 --- !u!4 &880135708
 Transform:
   m_ObjectHideFlags: 0
@@ -10441,7 +10442,7 @@ MonoBehaviour:
   gazeVisualizer: {fileID: 1989611008}
   m00Offset: 0
   m01Offset: 0
-  m02Offset: -0.31
+  m02Offset: -0.321
   m03Offset: 0
   m10Offset: 0
   m11Offset: 0
@@ -10455,7 +10456,7 @@ MonoBehaviour:
   m31Offset: 0
   m32Offset: 0
   m33Offset: 0
-  toggleProjectionMatrix: 1
+  toggleProjectionMatrix: 0
   portName: COM3
   baudRate: 2000000
   ReadTimeout: 5000
