@@ -16,6 +16,8 @@ public class GoToSettings : MonoBehaviour
     public Canvas taskSelectMenu;
     public Canvas human2DMenu;
     public Canvas humanArenaMenu;
+    public Canvas mainMenuArena;
+    public Canvas settingsArena;
     public GameObject obj;
     public GameObject settingMenu1;
     public GameObject settingMenu2;

@@ -782,6 +782,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 18309484}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -1229,6 +1231,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 26039369}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -1871,6 +1875,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 37922366}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -3260,6 +3266,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 62727862}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -3840,6 +3848,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 69184246}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -4507,6 +4517,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 82897261}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -5526,6 +5538,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 96940038}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -6035,6 +6049,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 99839175}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -6278,6 +6294,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 104200194}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -6920,6 +6938,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 110360962}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -7921,6 +7941,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 124292096}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -8504,6 +8526,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 147733849}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -9911,6 +9935,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 164978638}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -11052,6 +11078,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 182566351}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -11295,6 +11323,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 187132096}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -11987,6 +12017,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 203434172}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -12343,6 +12375,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 212739296}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -12606,6 +12640,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 215741416}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -13158,6 +13194,214 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224883287}
   m_CullTransparentMesh: 0
+--- !u!1 &226858898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226858899}
+  - component: {fileID: 226858904}
+  - component: {fileID: 226858903}
+  - component: {fileID: 226858902}
+  - component: {fileID: 226858901}
+  - component: {fileID: 226858900}
+  m_Layer: 5
+  m_Name: Arena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &226858899
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1039182046}
+  m_Father: {fileID: 1565355742}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 290, y: -0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &226858900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402af3613f23f3e43a939ca20b0ee80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  taskSelectMenu: {fileID: 0}
+  human2DMenu: {fileID: 0}
+  humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
+  obj: {fileID: 226858898}
+  settingMenu1: {fileID: 0}
+  settingMenu2: {fileID: 0}
+  settingMenu3: {fileID: 0}
+  saveButton: {fileID: 0}
+  loadButton: {fileID: 0}
+  freq: {fileID: 0}
+  duty: {fileID: 0}
+  span: {fileID: 0}
+  vmin: {fileID: 0}
+  vmax: {fileID: 0}
+  rmin: {fileID: 0}
+  rmax: {fileID: 0}
+  Lspeed: {fileID: 0}
+  Aspeed: {fileID: 0}
+  v1: {fileID: 0}
+  v2: {fileID: 0}
+  v3: {fileID: 0}
+  v4: {fileID: 0}
+  v5: {fileID: 0}
+  v6: {fileID: 0}
+  v7: {fileID: 0}
+  v8: {fileID: 0}
+  v9: {fileID: 0}
+  v10: {fileID: 0}
+  v11: {fileID: 0}
+  v12: {fileID: 0}
+  size: {fileID: 0}
+  radius: {fileID: 0}
+  min: {fileID: 0}
+  max: {fileID: 0}
+  dist: {fileID: 0}
+  height: {fileID: 0}
+  NFirefly: {fileID: 0}
+  panel: {fileID: 0}
+  error: {fileID: 0}
+  okayButton: {fileID: 0}
+  loading: {fileID: 0}
+  window: {fileID: 0}
+  regularMenu: {fileID: 0}
+  FFMenu: {fileID: 0}
+  calibrationMenu: {fileID: 0}
+--- !u!114 &226858901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 226858903}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 226858902}
+        m_MethodName: ToArenaMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &226858902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9174028d02c03a48ab149c8c8efad3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuArena: {fileID: 0}
+  settingsMenuArena: {fileID: 0}
+  mainMenu: {fileID: 1565355741}
+  settingsMenu: {fileID: 478170140}
+--- !u!114 &226858903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6304ad603f150b649b764d29bbc2a87b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &226858904
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226858898}
+  m_CullTransparentMesh: 0
 --- !u!1 &227597141
 GameObject:
   m_ObjectHideFlags: 0
@@ -13346,6 +13590,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 229189409}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -13710,6 +13956,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 238607870}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -13990,6 +14238,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 239703624}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -14710,6 +14960,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 254156102}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -14847,6 +15099,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 255603578}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -15337,6 +15591,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 261145710}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -15846,6 +16102,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 266255342}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -16089,6 +16347,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 267608493}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -16465,6 +16725,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 271315062}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -17713,7 +17975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177, y: -0}
+  m_AnchoredPosition: {x: -277, y: -0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290716408
@@ -17759,8 +18021,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 290716412}
-        m_MethodName: BeginGame
+      - m_Target: {fileID: 290716411}
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17819,6 +18081,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9174028d02c03a48ab149c8c8efad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuArena: {fileID: 1565355741}
+  settingsMenuArena: {fileID: 1565355741}
+  mainMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
 --- !u!114 &290716412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17835,6 +18101,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 290716406}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -17935,6 +18203,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 293772750}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -19413,6 +19683,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 323897149}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -19966,6 +20238,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 332683401}
   settingMenu1: {fileID: 1431257420}
   settingMenu2: {fileID: 1273225176}
@@ -20209,6 +20483,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 336773626}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -20635,6 +20911,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 348856498}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -20858,6 +21136,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 353001061}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -21570,6 +21850,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 360426086}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -22129,6 +22411,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 364326207}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -23824,6 +24108,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 392314038}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -24414,6 +24700,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 397820976}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -25200,6 +25488,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 403698490}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -25406,6 +25696,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 404616473}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -26924,6 +27216,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 429523255}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -27167,6 +27461,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 430822009}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -27410,6 +27706,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 435152469}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -27919,6 +28217,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 437544092}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -30147,6 +30447,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 486297505}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -30390,6 +30692,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 491470793}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -30793,6 +31097,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 497976237}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -32041,6 +32347,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 515878188}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -32405,6 +32713,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 521235528}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -33458,6 +33768,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 550416379}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -33834,6 +34146,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 560894239}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -34417,6 +34731,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 574821919}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -35032,6 +35348,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 592524268}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -35796,6 +36114,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 606130650}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -36222,6 +36542,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 622798990}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -36799,6 +37121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9174028d02c03a48ab149c8c8efad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuArena: {fileID: 0}
+  settingsMenuArena: {fileID: 0}
+  mainMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
 --- !u!114 &634099006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37037,6 +37363,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 634869145}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -38256,6 +38584,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 676655152}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -38499,6 +38829,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 678092482}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -39066,6 +39398,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 682919493}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -39934,6 +40268,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 703702048}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -40462,6 +40798,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 709715477}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -41085,6 +41423,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 719362385}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -41614,6 +41954,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 729467164}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -41990,6 +42332,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 731777876}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -42549,6 +42893,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 738822675}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -42842,6 +43188,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 750891664}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -43381,6 +43729,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 752988946}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -44702,6 +45052,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 799818729}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -45255,6 +45607,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 812127436}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -45444,6 +45798,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 817575759}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -46931,6 +47287,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 846362106}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -47560,6 +47918,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 856694697}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -47694,6 +48054,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 859454916}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -47969,6 +48331,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 862705788}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -48681,6 +49045,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 875413348}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -48924,6 +49290,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 875508761}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -50772,6 +51140,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 911662574}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -51331,6 +51701,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 931951618}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -51819,6 +52191,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 948180936}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -52245,6 +52619,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 954341740}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -53070,6 +53446,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 965557530}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -53446,6 +53824,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 974858942}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -55467,6 +55847,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1011499402}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -56292,6 +56674,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1015965494}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -57302,6 +57686,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036937338}
   m_CullTransparentMesh: 0
+--- !u!1 &1039182045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039182046}
+  - component: {fileID: 1039182048}
+  - component: {fileID: 1039182047}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1039182046
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039182045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226858899}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1039182047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039182045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Arena
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1039182048
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039182045}
+  m_CullTransparentMesh: 0
 --- !u!1 &1041455979
 GameObject:
   m_ObjectHideFlags: 0
@@ -57733,6 +58250,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1049071020}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -57976,6 +58495,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1049309511}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -58746,6 +59267,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1053455431}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -60836,6 +61359,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1114886677}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -61415,6 +61940,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1117620213}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -61791,6 +62318,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1128651511}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -62167,6 +62696,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1136640006}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -62356,6 +62887,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1137452730}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -63713,6 +64246,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1158689547}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -63956,6 +64491,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1164478652}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -64338,7 +64875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168432068
@@ -64411,6 +64948,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1168432066}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -64651,6 +65190,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1169676560}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -64838,6 +65379,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1171173179}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -65122,6 +65665,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1171264930}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -66100,6 +66645,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1184539074}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -68339,6 +68886,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1233305938}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -68582,6 +69131,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1236248160}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -69008,6 +69559,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1238201975}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -69384,6 +69937,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1249305802}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -69627,6 +70182,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1250095851}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -70825,6 +71382,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1272138174}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -71369,6 +71928,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1282886640}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -72309,6 +72870,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1294234710}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -72705,6 +73268,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1298646159}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -73530,6 +74095,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1314910961}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -73752,6 +74319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9174028d02c03a48ab149c8c8efad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuArena: {fileID: 0}
+  settingsMenuArena: {fileID: 0}
+  mainMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
 --- !u!1 &1317454135
 GameObject:
   m_ObjectHideFlags: 0
@@ -74833,6 +75404,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1335338339}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -75345,6 +75918,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1352427552}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -75588,6 +76163,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1366009023}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -76903,6 +77480,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1382101751}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -77196,6 +77775,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1385396107}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -77608,6 +78189,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1408366349}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -78448,6 +79031,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1415592831}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -78691,6 +79276,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1416767023}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -78934,6 +79521,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1420468056}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -79470,6 +80059,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1435336117}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -80044,6 +80635,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1443661150}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -80287,6 +80880,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1447814843}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -80663,6 +81258,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1452684576}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -80906,6 +81503,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1457551358}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -81441,6 +82040,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1461544873}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -81797,6 +82398,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1470956567}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -82040,6 +82643,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1472379970}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -83101,6 +83706,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1502195150}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -84007,6 +84614,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1523541474}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -84649,6 +85258,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1543489341}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -85271,6 +85882,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1554486877}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -86409,6 +87022,7 @@ RectTransform:
   - {fileID: 1316113050}
   - {fileID: 634099003}
   - {fileID: 118155300}
+  - {fileID: 226858899}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -86581,6 +87195,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1574172040}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -86824,6 +87440,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1575638482}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -87431,6 +88049,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1581641257}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -88837,6 +89457,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1626675895}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -89116,6 +89738,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1639446600}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -89859,6 +90483,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1658812850}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -90117,6 +90743,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1664410264}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -90930,6 +91558,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1683446804}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -91381,6 +92011,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1689172323}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -92368,6 +93000,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1712081704}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -92502,6 +93136,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1716821533}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -92766,6 +93402,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1718792183}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -93046,6 +93684,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1722717882}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -93383,6 +94023,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1726474366}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -95179,6 +95821,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1771352974}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -96103,6 +96747,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1789290377}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -96397,6 +97043,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1799100335}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -96629,6 +97277,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1803171444}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -96893,6 +97543,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1803780813}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -97269,6 +97921,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1807610310}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -97828,6 +98482,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1821667712}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -98118,6 +98774,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1829014118}
   settingMenu1: {fileID: 1431257420}
   settingMenu2: {fileID: 0}
@@ -99130,6 +99788,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1843057642}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -99473,6 +100133,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1849744922}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -99608,6 +100270,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1852636321}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -100349,6 +101013,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1862025179}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -100613,6 +101279,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1863122051}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -101222,6 +101890,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1868439867}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -102199,6 +102869,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1883213727}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -102575,6 +103247,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1888952643}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -102818,6 +103492,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1890299397}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -103614,6 +104290,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1899993094}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -103990,6 +104668,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1904968118}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -104346,6 +105026,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1908382280}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -105158,6 +105840,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1922058219}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -105347,6 +106031,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1923925246}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -106551,6 +107237,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1934649667}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -107401,6 +108089,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1947338632}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -107624,6 +108314,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1950137244}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -108020,6 +108712,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1958123966}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -109176,6 +109870,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1969262390}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -110097,6 +110793,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 1993904436}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -111195,6 +111893,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2020584821}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -111609,6 +112309,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2041815178}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -112677,6 +113379,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2067610684}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -112920,6 +113624,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2068890914}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -113795,6 +114501,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2080201507}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -114171,6 +114879,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2082300803}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -114360,6 +115070,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 1334487516}
   human2DMenu: {fileID: 478170140}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2084639323}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}
@@ -115401,6 +116113,8 @@ MonoBehaviour:
   taskSelectMenu: {fileID: 0}
   human2DMenu: {fileID: 0}
   humanArenaMenu: {fileID: 0}
+  mainMenuArena: {fileID: 0}
+  settingsArena: {fileID: 0}
   obj: {fileID: 2107256053}
   settingMenu1: {fileID: 0}
   settingMenu2: {fileID: 0}

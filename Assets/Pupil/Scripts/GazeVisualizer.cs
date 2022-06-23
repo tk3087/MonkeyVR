@@ -168,6 +168,14 @@ namespace PupilLabs
 
                 timeSync.UpdateTimeSync();
             }
+            else if (next.name == "Arena")
+            {
+                gazeOrigin = Camera.main.transform;
+                
+                StopVisualizing();
+
+                timeSync.UpdateTimeSync();
+            }
         }
 
         public void StopVisualizing()

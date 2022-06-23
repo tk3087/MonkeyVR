@@ -387,6 +387,10 @@ namespace PupilLabs
             {
                 ToggleMicroStimu();
             }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                SceneManager.LoadScene(3);
+            }
             else if (!flagCalibrating)
             {
                 if (Input.GetKeyDown(KeyCode.Keypad1))
