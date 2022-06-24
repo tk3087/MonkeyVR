@@ -5,6 +5,7 @@ using System.IO.Ports;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 using UnityEngine.UI;
 using static Serial;
 
@@ -168,10 +169,13 @@ namespace PupilLabs
         }
         [HideInInspector] public Status status;
         readonly static List<int> order = new List<int>()
+        //{
+        //    3, 6, 7, 8, 5, 2, 1, 0, 3, 7, 5, 1, 0, 6, 8, 2, 4
+        //};
         {
-            3, 6, 7, 8, 5, 2, 1, 0, 3, 7, 5, 1, 0, 6, 8, 2, 4
+             2, 1, 0
         };
-        int autoIdx = 0;
+    int autoIdx = 0;
 
         System.Random random = new System.Random();
 
@@ -286,7 +290,9 @@ namespace PupilLabs
         private void Start()
         {
             sp = serial.sp;
+
             SceneManager.activeSceneChanged += OnSceneChange;
+       
         }
 
         void OnSceneChange(Scene prev, Scene next)

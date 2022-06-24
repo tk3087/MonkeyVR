@@ -84,11 +84,9 @@ namespace PupilLabs
             targetRenderer = gazeDirectionMarker.GetComponent<MeshRenderer>();
 
             projectionMarker.localScale = Vector3.one * 0.025f;
-#if UNITY_EDITOR
-            EditorSceneManager.activeSceneChanged += ChangedActiveScene;
-#else
+
             SceneManager.activeSceneChanged += ChangedActiveScene;       
-#endif
+
 
             StartVisualizing();
         }

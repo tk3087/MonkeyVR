@@ -93,11 +93,9 @@ namespace PupilLabs
 
                 DontDestroyOnLoad(this);
 
-#if UNITY_EDITOR
-                EditorSceneManager.activeSceneChanged += ChangedActiveScene;
-#else
+
             SceneManager.activeSceneChanged += ChangedActiveScene;       
-#endif
+
             
         }
 
@@ -568,6 +566,7 @@ namespace PupilLabs
                 flagPlaying = true;
                 //flagRecording = true;
                 gazeOrigin = Camera.main.transform;
+                timeSync.UpdateTimeSync();
             }
         }
 
