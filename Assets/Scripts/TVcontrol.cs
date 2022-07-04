@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using FFTW.NET;
 using Foraging3Screens;
+using static SerialArena; 
 
 //using UE = UnityEngine;
 
@@ -148,7 +149,7 @@ public class TVcontrol : MonoBehaviour
     
     void Awake()
     {
-
+        
         //audioSource = gameObject.GetComponent<AudioSource>();
         
         //audioSource.spatialBlend = 0; // 2D sound
@@ -359,7 +360,7 @@ public class TVcontrol : MonoBehaviour
 
 
 
-
+        
         CTIJoystick joystick = CTIJoystick.current;
         dist = UnityEngine.Vector3.Distance(transform.position, player.position);
         
@@ -377,7 +378,7 @@ public class TVcontrol : MonoBehaviour
         }
 
         
-       if (press==1 && dist < RewardRadius && BoxButton==ButtonState.Released && dotProd > 0.707)
+       if ( (press==1||serialArena.suctionBtn) && dist < RewardRadius && BoxButton==ButtonState.Released && dotProd > 0.707)
         {
             double pp;
 
@@ -408,6 +409,7 @@ public class TVcontrol : MonoBehaviour
                 audioSource.clip = winSound;
                 audioSource.Play();
 
+                serialArena.GiveJuice();
 
             }
             else
@@ -433,6 +435,7 @@ public class TVcontrol : MonoBehaviour
 
             timePointButtonPressed = lastClick;
 
+            serialArena.suctionBtn = false; 
         }
         else if (press==0)
         {

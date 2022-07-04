@@ -118,6 +118,10 @@ public class ArenaGame : MonoBehaviour
 
 
 
+    //
+    GameObject theCalibrationCntrl;
+    GameObject theGazeControler;
+    GameObject theGazeVisualizer;
 
 
 
@@ -141,7 +145,7 @@ public class ArenaGame : MonoBehaviour
     private void Awake()
     {
         theArenaGame = this;
-
+        
         // Check if got here as 1st run or through quit and restart by menu
         if (fg3Sc == null)
         {
@@ -153,27 +157,58 @@ public class ArenaGame : MonoBehaviour
         }
         timeToEndTrial = Time.time +  (float)PlayerPrefs.GetFloat("TrialDuration");
 
-        var error = SRanipal_Eye_Framework.Status;
-        Debug.Log("SRanipal Engine Status: " + error.ToString());
-        //Tomkil calib ok
-        //int result = ViveSR.anipal.Eye.SRanipal_Eye_API.LaunchEyeCalibration(System.IntPtr.Zero);
-        //Debug.Log("SRanipal Engine Calib: " + result.ToString());
-
-        if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING)
+        if (PlayerPrefs.GetInt("ArenaMode")!=1)
         {
-            SRanipal_Eye_Framework.Instance.StartFramework();
-        }
-        //tomkl check also cases not support error etc
+            var error = SRanipal_Eye_Framework.Status;
+            Debug.Log("SRanipal Engine Status: " + error.ToString());
+            //Tomkil calib ok
+            //int result = ViveSR.anipal.Eye.SRanipal_Eye_API.LaunchEyeCalibration(System.IntPtr.Zero);
+            //Debug.Log("SRanipal Engine Calib: " + result.ToString());
 
-        error = SRanipal_Eye_Framework.Status;
-        Debug.Log("SRanipal Engine Status: " + error.ToString());
+            if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING)
+            {
+                SRanipal_Eye_Framework.Instance.StartFramework();
+            }
+            //tomkl check also cases not support error etc
+
+            error = SRanipal_Eye_Framework.Status;
+            Debug.Log("SRanipal Engine Status: " + error.ToString());
+
+        }
 
 
         // Check if color boxes need to color marked
         // No need directly set to COLOR_SCREENS_ON_BOXES
         //if (PlayerPrefs.GetString("ColorOnBoxes") == "1")
         //    COLOR_SCREENS_ON_BOXES = true;
-         
+
+        //Get the Calibration Controller
+        
+        theGazeControler = GameObject.Find("Gaze Controller");
+        if (theGazeControler == null)
+            Debug.Log("Gaze Controller not found!");
+        else
+        {
+            theGazeVisualizer = GameObject.Find("Gaze Visualizer");
+            if (theGazeVisualizer == null)
+                Debug.Log("Gaze Visualizer not found!");
+            else
+                theGazeVisualizer.SetActive(false);
+        }
+
+        
+        theCalibrationCntrl = GameObject.Find("Calibration Controller");
+        if (theCalibrationCntrl == null)
+            Debug.Log("Calibration Control not found!");
+        else
+        {
+            // Disable the Calibration Controler
+            
+            theCalibrationCntrl.SetActive(false);
+        }
+
+
+        
 
     }
 
@@ -181,8 +216,8 @@ public class ArenaGame : MonoBehaviour
 
     void Start()
     {
-        
 
+        
         updates = 0;
         if (playerObj == null)
             playerObj = GameObject.Find("Player");
@@ -311,17 +346,18 @@ public class ArenaGame : MonoBehaviour
 
     public void FixedUpdate()
     {
+
         //this.updates += 1;
         //print(sharedmovement.moveX);
-        if (Input.GetKey(KeyCode.Escape) )
+        if (Input.GetKey(KeyCode.Escape))
         {
             keyEscapePressed = 1;
         }
-        else if (Input.GetKey(KeyCode.LeftControl) && keyEscapePressed==1)
+        else if (Input.GetKey(KeyCode.LeftControl) && keyEscapePressed == 1)
         {
             if (DATA_SAVED == false)
             {
-                if (PlayerPrefs.GetInt("ArenaMode")==1)
+                if (PlayerPrefs.GetInt("ArenaMode") == 1)
                 {
 
                 }
@@ -342,31 +378,53 @@ public class ArenaGame : MonoBehaviour
                 StartCoroutine(ShowScore());
 
                 //SceneManager.LoadScene("MainMenu");
-                
+
             }
         }
         else if (Input.GetKey("w"))
         {
             keyEscapePressed = 0;
-            SaveData();
-            SaveDataToMem();
-            SaveDataToFile();
+            if (PlayerPrefs.GetInt("ArenaMode") == 1)
+            {
+
+            }
+            else { 
+                
+                SaveData();
+                SaveDataToMem();
+                SaveDataToFile();
+            }
 
         }
         else if (Time.time > timeToEndTrial)
         {
+            
+
+
+
             if (DATA_SAVED == false)
             {
 
-                SaveData();
-                SaveDataToMem();
-                SaveDataToFile();
+                if (PlayerPrefs.GetInt("ArenaMode") == 1)
+                {
 
+                }
+                else
+                {
+                    SaveData();
+                    SaveDataToMem();
+                    SaveDataToFile();
+
+                }
+
+                keyEscapePressed = 0;
+
+                
                 DATA_SAVED = true;
                 // Display Score and wait
                 //theScoreTMP.text = theScore.ToString();
                 //theScoreDisp.SetActive(true);
-                keyEscapePressed = 0;
+                
 
                 StartCoroutine(ShowScore());
 

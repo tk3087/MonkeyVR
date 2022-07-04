@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Ports;
@@ -396,7 +397,18 @@ namespace PupilLabs
             else if (Input.GetKeyDown(KeyCode.A))
             {
                 SceneManager.LoadScene(3);
+
+
+
+                //SceneManager.LoadScene(5);
+                //StartCoroutine(LoadAsyncArena());
+                //SceneManager.LoadScene("Arena", LoadSceneMode.Additive);
+                //Scene theArenaScene = SceneManager.GetSceneByName("Arena");
+                //SceneManager.UnloadSceneAsync(1);
+                //SceneManager.SetActiveScene(theArenaScene);
             }
+
+
             else if (!flagCalibrating)
             {
                 if (Input.GetKeyDown(KeyCode.Keypad1))
@@ -445,9 +457,9 @@ namespace PupilLabs
                     flagChangePos = !flagChangePos;
                 }
 
-                if (targetIdx>8)
+                if (targetIdx > 8)
                 {
-                    targetIdx=0;
+                    targetIdx = 0;
                 }
 
                 if (!calibration.IsCalibrating && !flagFuseTest && !flagMicroStimu)
@@ -1367,5 +1379,40 @@ namespace PupilLabs
 
             await new WaitForSeconds(time / 1000.0f);
         }
+        void LoadAsync2Arena()
+        {
+            Scene theArenaScene = SceneManager.GetSceneByName("Arena");
+            AsyncOperation theSceneOp = SceneManager.LoadSceneAsync(3);
+            theSceneOp.allowSceneActivation = false;
+            while (!theSceneOp.isDone)
+            {; }
+
+            theSceneOp.allowSceneActivation = true;
+
+            SceneManager.SetActiveScene(theArenaScene);
+
+        }
+        IEnumerator LoadAsyncArena()
+        {
+
+            Scene theArenaScene = SceneManager.GetSceneByName("Arena");
+            AsyncOperation theSceneOp = SceneManager.LoadSceneAsync(3);
+            theSceneOp.allowSceneActivation = false;
+            while (!theSceneOp.isDone)
+            { yield return null; }
+
+            theSceneOp.allowSceneActivation = true;
+
+            SceneManager.SetActiveScene(theArenaScene);
+
+            //AsyncOperation async_Load = SceneManager.LoadSceneAsync("Arena");
+
+            //while (!async_Load.isDone)
+            //{
+            //    yield return null;
+            //}
+        }   
     }
+
+    
 }

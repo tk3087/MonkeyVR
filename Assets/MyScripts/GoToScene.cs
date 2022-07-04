@@ -70,14 +70,13 @@ public class GoToScene : MonoBehaviour
 
     public void QuitGame()
     {
-        mainMenu.enabled = true;
-#if UNITY_EDITOR
-        EditorSceneManager.LoadScene("MainMenu");
+        //mainMenu.enabled = true;
+        SceneManager.LoadScene("MainMenu");
         
-#else
-        SceneManager.LoadScene("MainMenu_Arena");       
+
+            
         //Application.Quit();
-#endif
+
     }
 
     public void ToggleLogEyeTracker(bool tog)

@@ -204,6 +204,7 @@ public class JoystickMonke : MonoBehaviour
     void Awake()
     {
         SharedJoystick = this;
+        //DelayIt();
     }
 
     void Start()
@@ -906,5 +907,17 @@ public class JoystickMonke : MonoBehaviour
         }
         while (y + y < x * x && (x == 0 || y == 0));
         return R + x;
+    }
+
+    void DelayIt()
+    {
+
+        var t = Task.Run(async delegate
+        {
+            await Task.Delay(12000);
+            return 111;
+        });
+        t.Wait();
+        Debug.Log("DELAY>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Status:"+t.Status.ToString()+" Result: "+t.Result.ToString() );
     }
 }
