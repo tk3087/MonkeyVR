@@ -13,7 +13,7 @@ public class SerialArena : MonoBehaviour
     float juiceTime;
     public bool suctionBtn = false;
     bool inSuction = false;
-    
+    string ComPort;
 
     ulong tNow, tStart, validSuctionDuration;
     char vacSwitch='1';
@@ -31,8 +31,9 @@ public class SerialArena : MonoBehaviour
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
 
+            ComPort = PlayerPrefs.GetString("ArenaComPort", "COM5");
             juiceTime = PlayerPrefs.GetFloat("Max Juice Time");
-            sp = new SerialPort("COM5", 1000000);
+            sp = new SerialPort(ComPort, 1000000);
             sp.Open();
             sp.ReadTimeout = 1;
 

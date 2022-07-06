@@ -76,7 +76,7 @@ public class DeAct_GoToSettings : MonoBehaviour
                     Debug.LogException(e, this);
                 }
             }
-            else if (obj.name == "SubjectName")
+            else if (obj.name == "SubjectName" || obj.name == "ArenaComPort")
             {
                 string temp = input.text;
                 PlayerPrefs.SetString(obj.name, input.text);
