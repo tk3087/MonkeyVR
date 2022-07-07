@@ -25,6 +25,7 @@ public class ArenaGame : MonoBehaviour
     public float JOYPress;
 
     
+
     private GameObject playerObj = null;
 
     private GameObject boxTV1Obj = null;
@@ -140,6 +141,12 @@ public class ArenaGame : MonoBehaviour
     static bool DATA_SAVED = false;
 
     public bool ARENA_INITIALIZED = false;
+
+    public enum TrainingMode
+    { None, ScreenFront, ScreenStraight}
+
+    public TrainingMode ArenaTrainigMode = TrainingMode.None;
+
     
     // This script acts as the Main Manager tk
     private void Awake()
@@ -209,6 +216,7 @@ public class ArenaGame : MonoBehaviour
 
 
         
+
 
     }
 
@@ -314,7 +322,29 @@ public class ArenaGame : MonoBehaviour
 
         //Reset Latch Data save latch
         DATA_SAVED = false;
-        
+
+        int trainingMode = PlayerPrefs.GetInt("ArenaTrainingMode");
+
+        switch (trainingMode)
+        {
+            case 0:
+                ArenaTrainigMode = TrainingMode.None;
+                break;
+            case 1:
+                ArenaTrainigMode = TrainingMode.ScreenFront;
+                break;
+            case 2:
+                ArenaTrainigMode = TrainingMode.ScreenStraight;
+                break;
+            default:
+                ArenaTrainigMode = TrainingMode.None;
+                Debug.Log("ArenaGame: Unknown training mode. Setting training mode to: None");
+                break;
+
+
+        }
+
+            
     }
 
     // Update is called once per frame

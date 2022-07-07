@@ -8,8 +8,9 @@
   <BoxNoise1>0.2</BoxNoise1>
   <BoxNoise2>0.2</BoxNoise2>
   <BoxNoise3>0.2</BoxNoise3>
-  <TrialDuration>100</TrialDuration>
+  <TrialDuration>5000</TrialDuration>
   <DataAndConfigPath>C:\Projects\data</DataAndConfigPath>
+  <ComPort>0</ComPort>
   <LogEyeTracker>1</LogEyeTracker>
   <ColorScreenOnBoxes>1</ColorScreenOnBoxes>
 </Settings>

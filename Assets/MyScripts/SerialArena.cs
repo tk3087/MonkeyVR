@@ -8,7 +8,7 @@ public class SerialArena : MonoBehaviour
     public static SerialArena serialArena { get; private set; }
     public SerialPort sp;
     bool juice = true;
-    string inString;
+    string inString="";
     string[] tokens;
     float juiceTime;
     public bool suctionBtn = false;
@@ -25,8 +25,10 @@ public class SerialArena : MonoBehaviour
         if (serialArena == null)
             serialArena = this;
         else
+        {
             Object.Destroy(gameObject);
-
+            return;
+        }
 
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
@@ -34,6 +36,10 @@ public class SerialArena : MonoBehaviour
             ComPort = PlayerPrefs.GetString("ArenaComPort", "COM5");
             juiceTime = PlayerPrefs.GetFloat("Max Juice Time");
             sp = new SerialPort(ComPort, 1000000);
+            //sp.DataReceived+= new SerialDataReceivedEventHandler (SerialDataReceivedHandler);
+            //sp.DtrEnable = true;
+            //sp.RtsEnable = true;
+            //sp.Handshake = Handshake.None;
             sp.Open();
             sp.ReadTimeout = 1;
 
@@ -52,12 +58,20 @@ public class SerialArena : MonoBehaviour
 
             var keyboard = Keyboard.current;
             if (keyboard.spaceKey.isPressed && juice) GiveJuice();
-        
-            inString = sp.ReadLine();
-            tokens = inString.Split(',');
-        
-            tNow = ulong.Parse(tokens[0]);
-            vacSwitch = char.Parse(tokens[1]);
+            try
+            {
+                inString = sp.ReadLine();
+            }
+            catch { }
+
+            if (inString.Length > 0)
+            {
+                tokens = inString.Split(',');
+
+                tNow = ulong.Parse(tokens[0]);
+                vacSwitch = char.Parse(tokens[1]);
+
+            }
 
             if (vacSwitch == '0')
             {
@@ -103,11 +117,17 @@ public class SerialArena : MonoBehaviour
         }
     }
 
+    private void SerialDataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+    {
+        SerialPort _sp = (SerialPort) sender;
+        inString = _sp.ReadExisting();
+    }
+
     private void OnDisable()
     {
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
-
+            sp.DataReceived -= SerialDataReceivedHandler;
             if (sp.IsOpen) sp.Close();
         }
     }

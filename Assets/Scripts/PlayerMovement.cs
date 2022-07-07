@@ -48,12 +48,13 @@ public class PlayerMovement : MonoBehaviour
 
     public SteamVR_Behaviour_Pose controllerPose;
 
+    
     // Start is called before the first frame update
 
     void Awake()
     {
         sharedmovement = this;
-      
+        
        
 
     }
@@ -69,11 +70,38 @@ public class PlayerMovement : MonoBehaviour
         // Travel time = 4 (sec desired travel time for 2R);
         PlayerPrefs.SetFloat("MovementMultiplier", movementMultiplier);
 
-        //Set player at random direction initially.
-
-        Quaternion rand_Y_Rotation = Quaternion.Euler(0f, 360 * UnityEngine.Random.value, 0f);
-        rb.MoveRotation(rand_Y_Rotation);
+        float initialPlayerRot = 0;
+        Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
         
+        switch (ArenaGame.theArenaGame.ArenaTrainigMode)
+        {
+            case ArenaGame.TrainingMode.None:
+
+                //Set player at random direction initially.
+                initialPlayerRot = UnityEngine.Random.value;
+                break;
+            
+            case ArenaGame.TrainingMode.ScreenFront:
+                //Set player infront of Screen 1.
+                initialPlayerRot = 60.0f;
+                initialPosition.x = 1.47f;
+                initialPosition.y = 0.2f;
+                initialPosition.z = 0.664f;
+                break;
+            
+            case ArenaGame.TrainingMode.ScreenStraight:
+                //Set player infront of Screen 1 at the middle of the Arena.
+                initialPlayerRot = 60.0f;
+                break;
+
+
+
+        }
+
+        Quaternion init_Y_Rotation = Quaternion.Euler(0f, initialPlayerRot, 0f);
+        rb.MoveRotation(init_Y_Rotation);
+        rb.MovePosition(initialPosition);
+
 
     }
 
@@ -95,47 +123,91 @@ public class PlayerMovement : MonoBehaviour
         moveX = joystick.x.ReadValue();
         moveY = joystick.y.ReadValue();
 
-        if (moveX < 0.0f)
-        {
-            moveX += 1.0f;
-        }
-        else if (moveX > 0.0f)
-        {
-            moveX -= 1.0f;
-        }
-        else if (moveX == 0)
-        {
-            if (prevX < 0.0f)
-            {
-                moveX -= 1.0f;
-            }
-            else if (prevX > 0.0f)
-            {
-                moveX += 1.0f;
-            }
-        }
-        prevX = moveX;
 
-        if (moveY < 0.0f)
+        
+        switch (ArenaGame.theArenaGame.ArenaTrainigMode)
         {
-            moveY += 1.0f;
+            case ArenaGame.TrainingMode.ScreenFront:
+                return;
+
+            case ArenaGame.TrainingMode.ScreenStraight:
+
+                if (moveY < 0.0f)
+                {
+                    moveY += 1.0f;
+                }
+                else if (moveY > 0.0f)
+                {
+                    moveY -= 1.0f;
+                }
+                else if (moveY == 0)
+                {
+                    if (prevY < 0.0f)
+                    {
+                        moveY -= 1.0f;
+                    }
+                    else if (prevY > 0.0f)
+                    {
+                        moveY += 1.0f;
+                    }
+                }
+                prevY = moveY;
+
+                moveX = 0;
+                break;
+
+            case ArenaGame.TrainingMode.None:
+
+                if (moveX < 0.0f)
+                {
+                    moveX += 1.0f;
+                }
+                else if (moveX > 0.0f)
+                {
+                    moveX -= 1.0f;
+                }
+                else if (moveX == 0)
+                {
+                    if (prevX < 0.0f)
+                    {
+                        moveX -= 1.0f;
+                    }
+                    else if (prevX > 0.0f)
+                    {
+                        moveX += 1.0f;
+                    }
+                }
+                prevX = moveX;
+
+
+
+                if (moveY < 0.0f)
+                {
+                    moveY += 1.0f;
+                }
+                else if (moveY > 0.0f)
+                {
+                    moveY -= 1.0f;
+                }
+                else if (moveY == 0)
+                {
+                    if (prevY < 0.0f)
+                    {
+                        moveY -= 1.0f;
+                    }
+                    else if (prevY > 0.0f)
+                    {
+                        moveY += 1.0f;
+                    }
+                }
+                prevY = moveY;
+                break;
+
+
         }
-        else if (moveY > 0.0f)
-        {
-            moveY -= 1.0f;
-        }
-        else if (moveY == 0)
-        {
-            if (prevY < 0.0f)
-            {
-                moveY -= 1.0f;
-            }
-            else if (prevY > 0.0f)
-            {
-                moveY += 1.0f;
-            }
-        }
-        prevY = moveY;
+
+
+
 
 
         moveDirection = orientation.forward * moveY + orientation.right * moveX;
