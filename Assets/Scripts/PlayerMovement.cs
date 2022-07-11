@@ -25,13 +25,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 moveDirection;
     Vector3 slopeMoveDirection;
-    
-    
-    
+
+
+
 
 
     Rigidbody rb;
-    
+
     public float moveX;
     public float moveY;
     float effective_X;
@@ -51,14 +51,14 @@ public class PlayerMovement : MonoBehaviour
 
     public SteamVR_Behaviour_Pose controllerPose;
 
-    
+
     // Start is called before the first frame update
 
     void Awake()
     {
         sharedmovement = this;
-        
-       
+
+
 
     }
 
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
         float initialPlayerRot = 0;
         Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
-        
+
         switch (ArenaGame.theArenaGame.ArenaTrainigMode)
         {
             case ArenaGame.TrainingMode.None:
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
                 //Set player at random direction initially.
                 initialPlayerRot = UnityEngine.Random.value;
                 break;
-            
+
             case ArenaGame.TrainingMode.ScreenFront:
                 //Set player infront of Screen 1.
                 initialPlayerRot = 60.0f;
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
                 initialPosition.y = 0.2f;
                 initialPosition.z = 0.664f;
                 break;
-            
+
             case ArenaGame.TrainingMode.ScreenStraight:
                 //Set player infront of Screen 1 at the middle of the Arena.
                 initialPlayerRot = 60.0f;
@@ -127,13 +127,24 @@ public class PlayerMovement : MonoBehaviour
         moveY = joystick.y.ReadValue();
 
 
-        
+
         switch (ArenaGame.theArenaGame.ArenaTrainigMode)
         {
             case ArenaGame.TrainingMode.ScreenFront:
                 return;
 
             case ArenaGame.TrainingMode.ScreenStraight:
+
+                if (ArenaGame.theArenaGame.resetPostionTrainingMode2 == true)
+                {
+                    float initialPlayerRot = 60;
+                    Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
+                    Quaternion init_Y_Rotation = Quaternion.Euler(0f, initialPlayerRot, 0f);
+                    rb.MoveRotation(init_Y_Rotation);
+                    rb.MovePosition(initialPosition);
+                    ArenaGame.theArenaGame.resetPostionTrainingMode2 = false;
+                    return;
+                }
 
                 if (moveX < 0.0f)
                 {
@@ -155,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
                 prevX = moveX;
-                
+
 
                 if (ArenaJoysticMode == 0)
                     moveX = 0;
@@ -214,13 +225,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (ArenaJoysticMode==0)
+        if (ArenaJoysticMode == 0)
         {
             effective_X = moveX;
             effective_Y = moveY;
 
         }
-        else if (ArenaJoysticMode==1)
+        else if (ArenaJoysticMode == 1)
         {
             effective_X = -moveY;
             effective_Y = moveX;
@@ -228,9 +239,9 @@ public class PlayerMovement : MonoBehaviour
 
 
         //moveDirection = orientation.forward * moveY + orientation.right * moveX;
-        
+
         moveDirection = orientation.forward * effective_Y + orientation.right * effective_X;
-       
+
 
         rb.AddForce(moveDirection.normalized * movementMultiplier * 0.2f, ForceMode.Force);
         if (moveX < 0.5f && moveX > -0.5f)

@@ -1,15 +1,12 @@
-﻿using System;
-using System.IO;
+﻿using Foraging3Screens;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
+using System.IO;
 using TMPro;
+using UnityEditor.SceneManagement;
+using UnityEngine;
 using ViveSR.anipal.Eye;
 using static PlayerMovement;
-using Foraging3Screens;
-using static GoToSettings;
 
 public class ArenaGame : MonoBehaviour
 {
@@ -21,12 +18,12 @@ public class ArenaGame : MonoBehaviour
 
     public uint updates;
     public string timestmp;
-    public float  time_in_w,fps;
+    public float time_in_w, fps;
     public float JOYPress;
 
     public int ArenaJoysticMode;
 
-    
+    public bool resetPostionTrainingMode2 = false;
 
     private GameObject playerObj = null;
 
@@ -50,17 +47,19 @@ public class ArenaGame : MonoBehaviour
     private Transform trans, childTrans;
     private SpriteRenderer aSpriteRenderer;
     private int col_state;
-    
+
     private int keyEscapePressed;
     float timeToEndTrial;
+    float timeToResetTrainingMode2;
+    int trainigMode2resetDuration;
 
     static public FG3Screens fg3Sc;
-    
-    static public int theScore=0; // Score Keeping
-   
+
+    static public int theScore = 0; // Score Keeping
+
 
     List<float> log_timeStamp = new List<float>();
-    
+
     List<float> log_x_PlayerPos = new List<float>();
     List<float> log_y_PlayerPos = new List<float>();
     List<float> log_z_PlayerPos = new List<float>();
@@ -105,7 +104,7 @@ public class ArenaGame : MonoBehaviour
     List<ulong> log_left_eye_data_validity_bitmask = new List<ulong>();
 
 
-    
+
     List<float> log_right_eye_data_x_dir = new List<float>();
     List<float> log_right_eye_data_y_dir = new List<float>();
     List<float> log_right_eye_data_z_dir = new List<float>();
@@ -145,16 +144,16 @@ public class ArenaGame : MonoBehaviour
     public bool ARENA_INITIALIZED = false;
 
     public enum TrainingMode
-    { None, ScreenFront, ScreenStraight}
+    { None, ScreenFront, ScreenStraight }
 
     public TrainingMode ArenaTrainigMode = TrainingMode.None;
 
-    
+
     // This script acts as the Main Manager tk
     private void Awake()
     {
         theArenaGame = this;
-        
+
         // Check if got here as 1st run or through quit and restart by menu
         if (fg3Sc == null)
         {
@@ -164,9 +163,9 @@ public class ArenaGame : MonoBehaviour
             fg3Sc.setup();
             fg3Sc.clut();
         }
-        timeToEndTrial = Time.time +  (float)PlayerPrefs.GetFloat("TrialDuration");
+        timeToEndTrial = Time.time + (float)PlayerPrefs.GetFloat("TrialDuration");
 
-        if (PlayerPrefs.GetInt("ArenaMode")!=1)
+        if (PlayerPrefs.GetInt("ArenaMode") != 1)
         {
             var error = SRanipal_Eye_Framework.Status;
             Debug.Log("SRanipal Engine Status: " + error.ToString());
@@ -192,7 +191,7 @@ public class ArenaGame : MonoBehaviour
         //    COLOR_SCREENS_ON_BOXES = true;
 
         //Get the Calibration Controller
-        
+
         theGazeControler = GameObject.Find("Gaze Controller");
         if (theGazeControler == null)
             Debug.Log("Gaze Controller not found!");
@@ -205,14 +204,14 @@ public class ArenaGame : MonoBehaviour
                 theGazeVisualizer.SetActive(false);
         }
 
-        
+
         theCalibrationCntrl = GameObject.Find("Calibration Controller");
         if (theCalibrationCntrl == null)
             Debug.Log("Calibration Control not found!");
         else
         {
             // Disable the Calibration Controler
-            
+
             theCalibrationCntrl.SetActive(false);
         }
 
@@ -227,7 +226,7 @@ public class ArenaGame : MonoBehaviour
     void Start()
     {
 
-        
+
         updates = 0;
         if (playerObj == null)
             playerObj = GameObject.Find("Player");
@@ -237,7 +236,7 @@ public class ArenaGame : MonoBehaviour
             boxTV1Obj = GameObject.Find("BoxTV1");
             boxTVCntrl1 = boxTV1Obj.GetComponentInChildren<TVcontrol>();
         }
-            
+
         if (boxTV2Obj == null)
         {
             boxTV2Obj = GameObject.Find("BoxTV2");
@@ -255,7 +254,7 @@ public class ArenaGame : MonoBehaviour
         if (colScreenBox1 == null)
         {
             colScreenBox1 = GameObject.Find("TVcurtain1");
-            
+
         }
         if (colScreenBox2 == null)
         {
@@ -274,14 +273,14 @@ public class ArenaGame : MonoBehaviour
 
 
         Renderer aRend;
-        if (COLOR_SCREENS_ON_BOXES==true)
+        if (COLOR_SCREENS_ON_BOXES == true)
         {
 
             //Set the colors of TVcutrtains
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            
+
             //
             aRend = colScreenBox1.GetComponent<Renderer>();
             aRend.material.color = new UnityEngine.Color32(243, 248, 18, 255); //yellowish
@@ -300,6 +299,8 @@ public class ArenaGame : MonoBehaviour
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            trainigMode2resetDuration = PlayerPrefs.GetInt("ArenaTrainigMode2ResetTime", 90);
+            timeToResetTrainingMode2 = Time.time + trainigMode2resetDuration;
             ARENA_INITIALIZED = true;
         }
 
@@ -316,9 +317,9 @@ public class ArenaGame : MonoBehaviour
         //get the score keeping object
         theScoreDisp = GameObject.Find("Score");
         theScoreTMP = theScoreDisp.GetComponent<TextMeshPro>();
-        
+
         theScore = 0;
-        
+
         // Disable display of score
         theScoreDisp.SetActive(false);
 
@@ -346,14 +347,14 @@ public class ArenaGame : MonoBehaviour
 
         }
 
-            
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (PlayerPrefs.GetInt("ArenaMode")==1)
+
+        if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
 
         }
@@ -366,14 +367,14 @@ public class ArenaGame : MonoBehaviour
         //{
 
         //  updates = 0;
-            //Log all the trial vars into coresponding lists
+        //Log all the trial vars into coresponding lists
         //
         //
 
-       //   SaveDataToMem();
-       //   SaveData();
+        //   SaveDataToMem();
+        //   SaveData();
 
-        
+
     }
 
     public void FixedUpdate()
@@ -420,8 +421,9 @@ public class ArenaGame : MonoBehaviour
             {
 
             }
-            else { 
-                
+            else
+            {
+
                 SaveData();
                 SaveDataToMem();
                 SaveDataToFile();
@@ -430,7 +432,7 @@ public class ArenaGame : MonoBehaviour
         }
         else if (Time.time > timeToEndTrial)
         {
-            
+
 
 
 
@@ -451,18 +453,24 @@ public class ArenaGame : MonoBehaviour
 
                 keyEscapePressed = 0;
 
-                
+
                 DATA_SAVED = true;
                 // Display Score and wait
                 //theScoreTMP.text = theScore.ToString();
                 //theScoreDisp.SetActive(true);
-                
+
 
                 StartCoroutine(ShowScore());
 
                 //SceneManager.LoadScene("MainMenu");
-                
+
             }
+        }
+        else if (Time.time > timeToResetTrainingMode2)
+        {
+
+            timeToResetTrainingMode2 = Time.time + trainigMode2resetDuration;
+            resetPostionTrainingMode2 = true;
         }
 
     }
@@ -471,15 +479,15 @@ public class ArenaGame : MonoBehaviour
         float rot;
 
         ViveSR.Error error = SRanipal_Eye_API.GetEyeData(ref data);
-        float x,lx,rx;
-        float y,ly,ry;
-        float z,lz,rz;
+        float x, lx, rx;
+        float y, ly, ry;
+        float z, lz, rz;
         ulong l_eye_data_validity_mask, r_eye_data_validity_mask, cmb_eye_data_validity_mask;
 
         var left = new SingleEyeData();
         var right = new SingleEyeData();
         var combined = new CombinedEyeData();
-        
+
         if (error == ViveSR.Error.WORK)
         {
             left = data.verbose_data.left;
@@ -553,7 +561,7 @@ public class ArenaGame : MonoBehaviour
         //
         //
         log_box1timeBtnPressd.Add(boxTVCntrl1.timePointButtonPressed);
-        if (boxTVCntrl1.RewardLatch==TVcontrol.RewardState.Given)
+        if (boxTVCntrl1.RewardLatch == TVcontrol.RewardState.Given)
         {
             log_box1RewardGiven.Add((byte)1);
             log_box1timeRewardGiven.Add(boxTVCntrl1.timePointButtonPressed);
@@ -640,7 +648,7 @@ public class ArenaGame : MonoBehaviour
 
             log_right_eye_data_validity_bitmask.Add(l_eye_data_validity_mask);
 
-                    
+
 
             log_calibration_status.Add(VR_HD_Calibrated ? (byte)1 : (byte)0);
         }
@@ -650,28 +658,28 @@ public class ArenaGame : MonoBehaviour
     public void SaveData()
     {
         float rot;
-        
+
         time_in_w = Time.time;
         timestmp = time_in_w.ToString("f6");
         fps = Time.frameCount / time_in_w;
 
         JOYPress = sharedmovement.press;
-        Debug.Log("Saving Data. Updates so far: " + timestmp );
+        Debug.Log("Saving Data. Updates so far: " + timestmp);
         Debug.Log("Achieved FPS:" + fps.ToString("f3"));
         Debug.Log("Player Pos ( x, y, z ) = ( " + playerObj.transform.position.x + ", " + playerObj.transform.position.y + ", " + playerObj.transform.position.z + " )");
-        
+
         rot = playerObj.transform.rotation.eulerAngles.y;
         if (rot > 180f)
             rot -= 360f;
-        
+
         Debug.Log("Player Rot ( x, y, z ) = ( " + playerObj.transform.localRotation.x + ", " + rot + ", " + playerObj.transform.localRotation.z + " )");
         Debug.Log("Joystick button state:" + JOYPress.ToString("f4"));
-        
+
         if (col_state == 0)
         {
             //aSpriteRenderer.color = Color.red;
-            
-            
+
+
 
             col_state = 1;
         }
@@ -691,10 +699,10 @@ public class ArenaGame : MonoBehaviour
     void SaveDataToFile()
     {
         //Get path
-        string path, pathname_cont, pathname_param, recordLine,subjName;
+        string path, pathname_cont, pathname_param, recordLine, subjName;
 
 
-        string Header,formatStr;
+        string Header, formatStr;
 
         subjName = PlayerPrefs.GetString("SubjectName");
 
@@ -769,7 +777,7 @@ public class ArenaGame : MonoBehaviour
                     log_right_eye_openness[i].ToString("f4"),
                     log_right_eye_data_validity_bitmask[i].ToString(),
                     log_calibration_status[i].ToString("f4")
-                    
+
                     ); ;
                 File.AppendAllText(pathname_cont, recordLine);
             }
@@ -777,7 +785,7 @@ public class ArenaGame : MonoBehaviour
         else
         {
             Header = "time_stamp,pos_x,pos_y,pos_z,rot_x,rot_y,rot_z," +
-                "b1_press,b1_rew,b1_time,b1_time_next_rew,b2_press,b2_rew,b2_time,b2_time_next_rew,b3_press,b3_rew,b3_time,b3_time_next_rew"; 
+                "b1_press,b1_rew,b1_time,b1_time_next_rew,b2_press,b2_rew,b2_time,b2_time_next_rew,b3_press,b3_rew,b3_time,b3_time_next_rew";
 
             formatStr = "{0},{1},{2},{3},{4},{5},{6}," +
                 "{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18}\n";
@@ -806,13 +814,13 @@ public class ArenaGame : MonoBehaviour
                     log_box3RewardGiven[i].ToString(),
                     log_box3timeRewardGiven[i].ToString("F6"),
                     log_box3timeToReward[i].ToString("F6")
-                   
+
                     );
                 File.AppendAllText(pathname_cont, recordLine);
             }
         }
-        
-        
+
+
         Debug.Log("Log file cont" + pathname_cont + " saved.\n");
 
         //
@@ -850,7 +858,7 @@ public class ArenaGame : MonoBehaviour
         yield return new WaitForSecondsRealtime(6f);
         //Debug.Log("CorStop : "+Time.time);
 #if UNITY_EDITOR
-        EditorSceneManager.LoadScene("MainMenu");        
+        EditorSceneManager.LoadScene("MainMenu");
 #else
         SceneManager.LoadScene("MainMenu");
 #endif
