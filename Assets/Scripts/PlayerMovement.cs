@@ -73,12 +73,12 @@ public class PlayerMovement : MonoBehaviour
             randomHeadingOnReset = true;
         
         // Position infront of TV2
-        preSetLocations[2].locPos = new Vector3(2.06f, 0.6f, 1.272f);
-        preSetLocations[2].locHeading = 190.0f;
+        preSetLocations[2].locPos = new Vector3(1.77f, 0.6f, 1.5f);
+        preSetLocations[2].locHeading = -132.0f;
 
         // Position infront of TV3
-        preSetLocations[3].locPos = new Vector3(-2.06f, 0.6f, 1.272f);
-        preSetLocations[3].locHeading = -190.0f;
+        preSetLocations[3].locPos = new Vector3(-2.09f, 0.6f, 1.22f);
+        preSetLocations[3].locHeading = 133.0f;
 
         // Position max distance infron of TV1
         preSetLocations[1].locPos = new Vector3(0.145f, 0.6f, 2.42190f);
