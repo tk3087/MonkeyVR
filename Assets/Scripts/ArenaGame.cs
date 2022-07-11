@@ -24,6 +24,8 @@ public class ArenaGame : MonoBehaviour
     public float  time_in_w,fps;
     public float JOYPress;
 
+    public int ArenaJoysticMode;
+
     
 
     private GameObject playerObj = null;
@@ -215,7 +217,7 @@ public class ArenaGame : MonoBehaviour
         }
 
 
-        
+        ArenaJoysticMode = PlayerPrefs.GetInt("ArenaJoystickMode", 0);
 
 
     }

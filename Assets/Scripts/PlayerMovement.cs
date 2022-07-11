@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     
     public float moveX;
     public float moveY;
+    float effective_X;
+    float effective_Y;
     public float press;
     [ShowOnly]
     public float currentSpeed;
@@ -43,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     public float RotSpeed = 360.0f;
     private float prevX;
     private float prevY;
+    private int ArenaJoysticMode;
 
     public static PlayerMovement sharedmovement;
 
@@ -102,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         rb.MoveRotation(init_Y_Rotation);
         rb.MovePosition(initialPosition);
 
-
+        ArenaJoysticMode = ArenaGame.theArenaGame.ArenaJoysticMode;
     }
 
     // Update is called once per frame
@@ -153,7 +156,10 @@ public class PlayerMovement : MonoBehaviour
                 }
                 prevY = moveY;
 
-                moveX = 0;
+                if (ArenaJoysticMode == 0)
+                    moveX = 0;
+                else
+                    moveY = 0;
                 break;
 
             case ArenaGame.TrainingMode.None:
@@ -207,10 +213,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        if (ArenaJoysticMode==0)
+        {
+            effective_X = moveX;
+            effective_Y = moveY;
+
+        }
+        else if (ArenaJoysticMode==1)
+        {
+            effective_X = -moveY;
+            effective_Y = moveX;
+        }
 
 
+        //moveDirection = orientation.forward * moveY + orientation.right * moveX;
+        
+        moveDirection = orientation.forward * effective_Y + orientation.right * effective_X;
+       
 
-        moveDirection = orientation.forward * moveY + orientation.right * moveX;
         rb.AddForce(moveDirection.normalized * movementMultiplier * 0.2f, ForceMode.Force);
         if (moveX < 0.5f && moveX > -0.5f)
         {
@@ -220,9 +240,24 @@ public class PlayerMovement : MonoBehaviour
         {
             moveY = 0f;
         }
-        currentSpeed = moveY * movementMultiplier;
-        currentRot = moveX * RotSpeed;
-        
+
+        if (ArenaJoysticMode == 0)
+        {
+            effective_X = moveX;
+            effective_Y = moveY;
+
+        }
+        else if (ArenaJoysticMode == 1)
+        {
+            effective_X = -moveY;
+            effective_Y = moveX;
+        }
+        //currentSpeed = moveY * movementMultiplier;
+        //currentRot = moveX * RotSpeed;
+
+        currentSpeed = effective_Y * movementMultiplier;
+        currentRot = effective_X * RotSpeed;
+
         rb.MovePosition(transform.position + transform.forward * currentSpeed * Time.deltaTime);
         Quaternion deltaRotation = Quaternion.Euler(0f, currentRot * Time.fixedDeltaTime, 0f);
         rb.MoveRotation(rb.rotation * deltaRotation);
