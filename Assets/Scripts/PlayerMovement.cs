@@ -135,26 +135,27 @@ public class PlayerMovement : MonoBehaviour
 
             case ArenaGame.TrainingMode.ScreenStraight:
 
-                if (moveY < 0.0f)
+                if (moveX < 0.0f)
                 {
-                    moveY += 1.0f;
+                    moveX += 1.0f;
                 }
-                else if (moveY > 0.0f)
+                else if (moveX > 0.0f)
                 {
-                    moveY -= 1.0f;
+                    moveX -= 1.0f;
                 }
-                else if (moveY == 0)
+                else if (moveX == 0)
                 {
-                    if (prevY < 0.0f)
+                    if (prevX < 0.0f)
                     {
-                        moveY -= 1.0f;
+                        moveX -= 1.0f;
                     }
-                    else if (prevY > 0.0f)
+                    else if (prevX > 0.0f)
                     {
-                        moveY += 1.0f;
+                        moveX += 1.0f;
                     }
                 }
-                prevY = moveY;
+                prevX = moveX;
+                
 
                 if (ArenaJoysticMode == 0)
                     moveX = 0;
