@@ -430,6 +430,10 @@ public class ArenaGame : MonoBehaviour
             }
 
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            resetPostionTrainingMode2 = true;
+        }
         else if (Time.time > timeToEndTrial)
         {
 
@@ -470,7 +474,7 @@ public class ArenaGame : MonoBehaviour
         {
 
             timeToResetTrainingMode2 = Time.time + trainigMode2resetDuration;
-            resetPostionTrainingMode2 = true;
+            //resetPostionTrainingMode2 = true;
         }
 
     }
