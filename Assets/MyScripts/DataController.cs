@@ -568,7 +568,7 @@ namespace PupilLabs
             {
                 flagPlaying = true;
                 //flagRecording = true;
-                gazeOrigin = Camera.main.transform;
+                //gazeOrigin = Camera.main.transform;
                 timeSync.UpdateTimeSync();
             }
         }

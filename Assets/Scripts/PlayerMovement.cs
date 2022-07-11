@@ -27,8 +27,16 @@ public class PlayerMovement : MonoBehaviour
     Vector3 slopeMoveDirection;
 
 
+    public struct Location
+    {
+        public Vector3 locPos;
+        public float locHeading;
+    }
 
+    Location[] preSetLocations = new Location[4];
 
+    
+    
 
     Rigidbody rb;
 
@@ -37,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     float effective_X;
     float effective_Y;
     public float press;
+    public bool randomHeadingOnReset = false;
     [ShowOnly]
     public float currentSpeed;
     [ShowOnly]
@@ -57,6 +66,29 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         sharedmovement = this;
+
+        if (PlayerPrefs.GetInt("ArenaRandomHeadingEnabled", 0) == 0)
+            randomHeadingOnReset = false;
+        else
+            randomHeadingOnReset = true;
+        
+        // Position infront of TV2
+        preSetLocations[2].locPos = new Vector3(2.06f, 0.6f, 1.272f);
+        preSetLocations[2].locHeading = 190.0f;
+
+        // Position infront of TV3
+        preSetLocations[3].locPos = new Vector3(-2.06f, 0.6f, 1.272f);
+        preSetLocations[3].locHeading = -190.0f;
+
+        // Position max distance infron of TV1
+        preSetLocations[1].locPos = new Vector3(0.145f, 0.6f, 2.42190f);
+        preSetLocations[1].locHeading = -179.0f;
+
+        //Position at the center of the Arena
+
+        preSetLocations[0].locPos = new Vector3(0.0f, 0.6f, 0.0f);
+        preSetLocations[0].locHeading = 180.0f;
+
 
 
 
@@ -81,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
             case ArenaGame.TrainingMode.None:
 
                 //Set player at random direction initially.
-                initialPlayerRot = UnityEngine.Random.value;
+                initialPlayerRot = 360.0f*UnityEngine.Random.value;
                 break;
 
             case ArenaGame.TrainingMode.ScreenFront:
@@ -135,14 +167,14 @@ public class PlayerMovement : MonoBehaviour
 
             case ArenaGame.TrainingMode.ScreenStraight:
 
-                if (ArenaGame.theArenaGame.resetPostionTrainingMode2 == true)
+                if (ArenaGame.theArenaGame.resetPostion == true)
                 {
                     float initialPlayerRot = 60;
                     Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
                     Quaternion init_Y_Rotation = Quaternion.Euler(0f, initialPlayerRot, 0f);
                     rb.MoveRotation(init_Y_Rotation);
                     rb.MovePosition(initialPosition);
-                    ArenaGame.theArenaGame.resetPostionTrainingMode2 = false;
+                    ArenaGame.theArenaGame.resetPostion = false;
                     return;
                 }
 
@@ -175,6 +207,31 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case ArenaGame.TrainingMode.None:
+
+                if (ArenaGame.theArenaGame.resetPostion == true)
+                {
+                    
+                   
+
+                    float initialPlayerRot = preSetLocations[ArenaGame.theArenaGame.presetPositionNumber].locHeading;
+                    //Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
+                    
+                    
+                    Vector3 initialPosition = preSetLocations[ArenaGame.theArenaGame.presetPositionNumber].locPos;
+
+                    
+                    
+                    //Overide heading if random heading is enabled.
+
+                    if (randomHeadingOnReset==true && ArenaGame.theArenaGame.presetPositionNumber==0)
+                        initialPlayerRot = 360.0f * UnityEngine.Random.value;
+
+                    Quaternion init_Y_Rotation = Quaternion.Euler(0f, initialPlayerRot, 0f);
+                    rb.MoveRotation(init_Y_Rotation);
+                    rb.MovePosition(initialPosition);
+                    ArenaGame.theArenaGame.resetPostion = false;
+                    return;
+                }
 
                 if (moveX < 0.0f)
                 {

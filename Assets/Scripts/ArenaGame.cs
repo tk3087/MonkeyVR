@@ -23,7 +23,8 @@ public class ArenaGame : MonoBehaviour
 
     public int ArenaJoysticMode;
 
-    public bool resetPostionTrainingMode2 = false;
+    public bool resetPostion = false;
+    public int presetPositionNumber = 0;
 
     private GameObject playerObj = null;
 
@@ -414,7 +415,7 @@ public class ArenaGame : MonoBehaviour
 
             }
         }
-        else if (Input.GetKey("w"))
+        else if (Input.GetKey("["))
         {
             keyEscapePressed = 0;
             if (PlayerPrefs.GetInt("ArenaMode") == 1)
@@ -430,9 +431,25 @@ public class ArenaGame : MonoBehaviour
             }
 
         }
-        else if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.R))
         {
-            resetPostionTrainingMode2 = true;
+            resetPostion = true;
+            presetPositionNumber = 0;
+        }
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            resetPostion = true;
+            presetPositionNumber = 2;
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            resetPostion = true;
+            presetPositionNumber = 3;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            resetPostion = true;
+            presetPositionNumber = 1;
         }
         else if (Time.time > timeToEndTrial)
         {

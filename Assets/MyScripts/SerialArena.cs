@@ -127,8 +127,9 @@ public class SerialArena : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
-            sp.DataReceived -= SerialDataReceivedHandler;
-            if (sp.IsOpen) sp.Close();
+            
+            //sp.DataReceived -= SerialDataReceivedHandler;
+            if (sp!=null && sp.IsOpen) sp.Close();
         }
     }
 }

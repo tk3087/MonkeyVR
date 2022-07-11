@@ -1,7 +1,7 @@
 <Settings>
   <CorrectPush>1</CorrectPush>
   <WrongPush>0</WrongPush>
-  <RewardRadius>1.7</RewardRadius>
+  <RewardRadius>1.5</RewardRadius>
   <BoxMean1>5</BoxMean1>
   <BoxMean2>10</BoxMean2>
   <BoxMean3>15</BoxMean3>
