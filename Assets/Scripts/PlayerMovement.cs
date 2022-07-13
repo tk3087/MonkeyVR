@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using Valve.VR;
+using static SerialArena;
 using UnityEngine.VR;
 
 
@@ -55,6 +56,10 @@ public class PlayerMovement : MonoBehaviour
     private float prevX;
     private float prevY;
     private int ArenaJoysticMode;
+    
+    private bool inBackwardMode = false;
+    private float startTimeMovingBack;
+    private float durationBackMoveToGetReward;
 
     public static PlayerMovement sharedmovement;
 
@@ -113,8 +118,8 @@ public class PlayerMovement : MonoBehaviour
         preSetLocations[9].locPos = new Vector3(-0.09f, 0.6f, -2.23f);
         preSetLocations[9].locHeading = 179.9f;
 
-
-
+        // ATTN:  ArenaBackMoveDuration is in ms
+        durationBackMoveToGetReward = PlayerPrefs.GetFloat("ArenaBackMoveDuration", 300.0f)/1000.0f;
 
 
 
@@ -333,6 +338,33 @@ public class PlayerMovement : MonoBehaviour
             //rev effective_Y = -moveX;
         }
 
+        if (inBackwardMode == true)
+        {
+            if (moveX < 0.0f)
+            {
+                // check duration
+                if (Time.time - startTimeMovingBack > durationBackMoveToGetReward)
+                {
+                    serialArena.GiveJuice();
+                    Debug.Log("["+Time.time.ToString("F3")+"] BACKWARD Move Reward Given!");
+                    inBackwardMode = false;
+                }
+            }
+            else
+            {
+                //reset flag
+                inBackwardMode = false;
+            }
+        }
+        else
+        {
+            if (moveX<0.0f)
+            {
+                inBackwardMode = true;
+                startTimeMovingBack = Time.time;
+
+            }
+        }
 
         //moveDirection = orientation.forward * moveY + orientation.right * moveX;
 
