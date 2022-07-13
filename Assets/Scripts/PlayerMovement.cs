@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     public float currentSpeed;
     [ShowOnly]
     public float currentRot;
-    public float TravelTime = 5; // Time in seconds to travel 2R of polygon
+    public float TravelTime = 7.5f; // Time in seconds to travel 2R of polygon
     public float RotSpeed = 120.0f; //360.0f;
     private float prevX;
     private float prevY;

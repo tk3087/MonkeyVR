@@ -21543,14 +21543,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 577780768}
-  movementMultiplier: 1.2
+  movementMultiplier: 0.8
   moveX: 0
   moveY: 0
   press: 0
   randomHeadingOnReset: 0
   currentSpeed: 0
   currentRot: 0
-  TravelTime: 5
+  TravelTime: 7.5
   RotSpeed: 120
   controllerPose: {fileID: 0}
 --- !u!54 &2076901957
@@ -21593,6 +21593,8 @@ MonoBehaviour:
   ArenaJoysticMode: 0
   resetPostion: 0
   presetPositionNumber: 0
+  doRotation: 0
+  rotationDirection: 0
   boxTVCntrl1: {fileID: 0}
   boxTVCntrl2: {fileID: 0}
   boxTVCntrl3: {fileID: 0}
