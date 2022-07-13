@@ -40501,6 +40501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49dde2b6a8aa6f340b64021427ba3539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  suctionBtn: 0
 --- !u!1 &705959121
 GameObject:
   m_ObjectHideFlags: 0
@@ -71554,7 +71555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VR_suite
+  m_text: VR_suite_Arena
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

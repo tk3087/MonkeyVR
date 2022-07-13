@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private int ArenaJoysticMode;
     
     private bool inBackwardMode = false;
+    
     private float startTimeMovingBack;
     private float durationBackMoveToGetReward;
 
@@ -187,6 +188,8 @@ public class PlayerMovement : MonoBehaviour
 
     void MyInput()
     {
+        Quaternion deltaRotation;
+        
         CTIJoystick joystick = CTIJoystick.current;
         moveX = joystick.x.ReadValue();
         moveY = joystick.y.ReadValue();
@@ -240,6 +243,18 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case ArenaGame.TrainingMode.None:
+
+                if (ArenaGame.theArenaGame.doRotation==true)
+                {
+
+                    currentRot = ArenaGame.theArenaGame.rotationDirection * RotSpeed;
+
+                    
+                    deltaRotation = Quaternion.Euler(0f, currentRot * Time.fixedDeltaTime, 0f);
+                    rb.MoveRotation(rb.rotation * deltaRotation);
+                    
+                    ArenaGame.theArenaGame.doRotation = false;
+                }
 
                 if (ArenaGame.theArenaGame.resetPostion == true)
                 {
@@ -402,7 +417,7 @@ public class PlayerMovement : MonoBehaviour
         currentRot = effective_X * RotSpeed;
 
         rb.MovePosition(transform.position + transform.forward * currentSpeed * Time.deltaTime);
-        Quaternion deltaRotation = Quaternion.Euler(0f, currentRot * Time.fixedDeltaTime, 0f);
+        deltaRotation = Quaternion.Euler(0f, currentRot * Time.fixedDeltaTime, 0f);
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
 }

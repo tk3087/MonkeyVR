@@ -7,6 +7,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using ViveSR.anipal.Eye;
 using static PlayerMovement;
+using static SerialArena;
 
 public class ArenaGame : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class ArenaGame : MonoBehaviour
 
     public bool resetPostion = false;
     public int presetPositionNumber = 0;
+
+    public bool doRotation = false;
+    public float rotationDirection;
 
     private GameObject playerObj = null;
 
@@ -484,6 +488,24 @@ public class ArenaGame : MonoBehaviour
             resetPostion = true;
             presetPositionNumber = 9;
         }
+        else if (Input.GetKey(KeyCode.Z))
+        {
+            rotationDirection = -1.0f;
+            doRotation = true;
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            rotationDirection = 1.0f;
+            doRotation = true;
+        }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            //Give Reward;
+            serialArena.GiveJuice();
+            Debug.Log("[" + Time.time.ToString("F3") + "] MANUALLY given reward");
+
+        }
+
         else if (Time.time > timeToEndTrial)
         {
 
