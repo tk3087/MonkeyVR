@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         public float locHeading;
     }
 
-    Location[] preSetLocations = new Location[4];
+    Location[] preSetLocations = new Location[10];
 
     
     
@@ -50,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
     public float currentSpeed;
     [ShowOnly]
     public float currentRot;
-    public float TravelTime = 4; // Time in seconds to travel 2R of polygon
-    public float RotSpeed = 360.0f;
+    public float TravelTime = 5; // Time in seconds to travel 2R of polygon
+    public float RotSpeed = 120.0f; //360.0f;
     private float prevX;
     private float prevY;
     private int ArenaJoysticMode;
@@ -72,22 +72,50 @@ public class PlayerMovement : MonoBehaviour
         else
             randomHeadingOnReset = true;
         
-        // Position infront of TV2
+        // Position Q 
         preSetLocations[2].locPos = new Vector3(1.77f, 0.6f, 1.5f);
         preSetLocations[2].locHeading = -132.0f;
 
-        // Position infront of TV3
+        // Position W 
         preSetLocations[3].locPos = new Vector3(-2.09f, 0.6f, 1.22f);
         preSetLocations[3].locHeading = 133.0f;
 
-        // Position max distance infron of TV1
+        // Position E max distance infron of TV1
         preSetLocations[1].locPos = new Vector3(0.145f, 0.6f, 2.42190f);
         preSetLocations[1].locHeading = -179.0f;
 
-        //Position at the center of the Arena
-
+        //Position R at the center of the Arena
         preSetLocations[0].locPos = new Vector3(0.0f, 0.6f, 0.0f);
         preSetLocations[0].locHeading = 180.0f;
+
+
+        //Position T viewing TV1 and TV2
+        preSetLocations[4].locPos = new Vector3(-2.654f, 0.6f, 0.246f);
+        preSetLocations[4].locHeading = 112.5f;
+
+        //Position Y at the center viewing the Wall between TV1 and TV2
+        preSetLocations[5].locPos = new Vector3(0.01f, 0.6f, 0.01f);
+        preSetLocations[5].locHeading = 120.0f;
+
+        //Position A at the corner viewing the Wall between TV2 and empty wall (TV2 on the left)
+        preSetLocations[6].locPos = new Vector3(2.4f, 0.6f, 0.06f);
+        preSetLocations[6].locHeading = 90.0f;
+
+        //Position S infrontof  the Wall between TV1 and TV2
+        preSetLocations[7].locPos = new Vector3(2.04f, 0.6f, -1.25f);
+        preSetLocations[7].locHeading = 120.0f;
+
+        //Position D at the center viewing the Wall between TV1 and empty wall (TV1 on the right)
+        preSetLocations[8].locPos = new Vector3(1.39f, 0.6f, -2.42f);
+        preSetLocations[8].locHeading = 155.0f;
+
+        //Position F infront of TV1 into the active area
+        preSetLocations[9].locPos = new Vector3(-0.09f, 0.6f, -2.23f);
+        preSetLocations[9].locHeading = 179.9f;
+
+
+
+
 
 
 

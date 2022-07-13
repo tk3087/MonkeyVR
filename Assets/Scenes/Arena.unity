@@ -21543,14 +21543,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 577780768}
-  movementMultiplier: 1
+  movementMultiplier: 1.2
   moveX: 0
   moveY: 0
   press: 0
+  randomHeadingOnReset: 0
   currentSpeed: 0
   currentRot: 0
-  TravelTime: 4
-  RotSpeed: 90
+  TravelTime: 5
+  RotSpeed: 120
   controllerPose: {fileID: 0}
 --- !u!54 &2076901957
 Rigidbody:
@@ -21589,10 +21590,14 @@ MonoBehaviour:
   time_in_w: 0
   fps: 0
   JOYPress: 0
+  ArenaJoysticMode: 0
+  resetPostion: 0
+  presetPositionNumber: 0
   boxTVCntrl1: {fileID: 0}
   boxTVCntrl2: {fileID: 0}
   boxTVCntrl3: {fileID: 0}
   ARENA_INITIALIZED: 0
+  ArenaTrainigMode: 0
 --- !u!114 &2076901959
 MonoBehaviour:
   m_ObjectHideFlags: 0

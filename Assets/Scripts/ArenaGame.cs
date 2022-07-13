@@ -269,7 +269,7 @@ public class ArenaGame : MonoBehaviour
         }
 
         colScreenBox1.SetActive(COLOR_SCREENS_ON_BOXES);
-        colScreenBox2.SetActive(false);
+        colScreenBox2.SetActive(COLOR_SCREENS_ON_BOXES);
         colScreenBox3.SetActive(false);
 
 
@@ -284,7 +284,9 @@ public class ArenaGame : MonoBehaviour
 
             //
             aRend = colScreenBox1.GetComponent<Renderer>();
-            aRend.material.color = new UnityEngine.Color32(243, 248, 18, 255); //yellowish
+
+            aRend.material.color = new UnityEngine.Color32(12, 12, 12, 255);
+            //aRend.material.color = new UnityEngine.Color32(243, 248, 18, 255); //ATTN yellowish interference with yellow activation frame on TVs
             //aRend.material.color = new UnityEngine.Color32(156,124,0,255);
             //aRend.material.color = new UnityEngine.Color(255, 0, 0, 255);
 
@@ -450,6 +452,36 @@ public class ArenaGame : MonoBehaviour
         {
             resetPostion = true;
             presetPositionNumber = 1;
+        }
+        else if (Input.GetKey(KeyCode.T))
+        {
+            resetPostion = true;
+            presetPositionNumber = 4;
+        }
+        else if (Input.GetKey(KeyCode.Y))
+        {
+            resetPostion = true;
+            presetPositionNumber = 5;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            resetPostion = true;
+            presetPositionNumber = 6;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            resetPostion = true;
+            presetPositionNumber = 7;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            resetPostion = true;
+            presetPositionNumber = 8;
+        }
+        else if (Input.GetKey(KeyCode.F))
+        {
+            resetPostion = true;
+            presetPositionNumber = 9;
         }
         else if (Time.time > timeToEndTrial)
         {
