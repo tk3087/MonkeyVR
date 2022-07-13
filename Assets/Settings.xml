@@ -2,15 +2,15 @@
   <CorrectPush>1</CorrectPush>
   <WrongPush>0</WrongPush>
   <RewardRadius>1.5</RewardRadius>
-  <BoxMean1>5</BoxMean1>
-  <BoxMean2>10</BoxMean2>
-  <BoxMean3>15</BoxMean3>
+  <BoxMean1>6</BoxMean1>
+  <BoxMean2>3</BoxMean2>
+  <BoxMean3>7</BoxMean3>
   <BoxNoise1>0.2</BoxNoise1>
   <BoxNoise2>0.2</BoxNoise2>
   <BoxNoise3>0.2</BoxNoise3>
-  <TrialDuration>5000</TrialDuration>
-  <DataAndConfigPath>C:\Projects\data</DataAndConfigPath>
+  <TrialDuration>200000</TrialDuration>
+  <DataAndConfigPath>C:\Data</DataAndConfigPath>
   <ComPort>0</ComPort>
   <LogEyeTracker>1</LogEyeTracker>
-  <ColorScreenOnBoxes>1</ColorScreenOnBoxes>
+  <ColorScreenOnBoxes>0</ColorScreenOnBoxes>
 </Settings>

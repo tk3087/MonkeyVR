@@ -233,6 +233,13 @@ public class PlayerMovement : MonoBehaviour
                     return;
                 }
 
+                /*
+                if (moveX < 0.0f)
+                    moveX = 1.0f;
+                */
+
+                
+
                 if (moveX < 0.0f)
                 {
                     moveX += 1.0f;
@@ -245,6 +252,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (prevX < 0.0f)
                     {
+                        //rev moveX = 1.0f; 
                         moveX -= 1.0f;
                     }
                     else if (prevX > 0.0f)
@@ -252,8 +260,10 @@ public class PlayerMovement : MonoBehaviour
                         moveX += 1.0f;
                     }
                 }
-                prevX = moveX;
 
+                // rev moveX *= -1;
+
+                prevX = moveX;
 
 
                 if (moveY < 0.0f)
@@ -292,6 +302,7 @@ public class PlayerMovement : MonoBehaviour
         {
             effective_X = -moveY;
             effective_Y = moveX;
+            //rev effective_Y = -moveX;
         }
 
 
@@ -301,6 +312,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         rb.AddForce(moveDirection.normalized * movementMultiplier * 0.2f, ForceMode.Force);
+        /*
         if (moveX < 0.5f && moveX > -0.5f)
         {
             moveX = 0f;
@@ -309,7 +321,7 @@ public class PlayerMovement : MonoBehaviour
         {
             moveY = 0f;
         }
-
+        
         if (ArenaJoysticMode == 0)
         {
             effective_X = moveX;
@@ -321,6 +333,8 @@ public class PlayerMovement : MonoBehaviour
             effective_X = -moveY;
             effective_Y = moveX;
         }
+        */
+
         //currentSpeed = moveY * movementMultiplier;
         //currentRot = moveX * RotSpeed;
 
