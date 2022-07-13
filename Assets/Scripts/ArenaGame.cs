@@ -291,7 +291,8 @@ public class ArenaGame : MonoBehaviour
             //aRend.material.color = new UnityEngine.Color(255, 0, 0, 255);
 
             aRend = colScreenBox2.GetComponent<Renderer>();
-            aRend.material.color = new UnityEngine.Color32(12, 96, 10, 255);
+            aRend.material.color = new UnityEngine.Color32(250, 250, 250, 255);
+            //aRend.material.color = new UnityEngine.Color32(12, 96, 10, 255);
             //aRend.material.color = new UnityEngine.Color(0, 255, 0, 255);
 
             aRend = colScreenBox3.GetComponent<Renderer>();
