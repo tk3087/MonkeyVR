@@ -30,6 +30,10 @@ public class ArenaGame : MonoBehaviour
     public bool doRotation = false;
     public float rotationDirection;
 
+    public bool alterRotationalSpeed = false;
+    public bool alterLinearSpeed = false;
+    public float alterationDirection;
+
     private GameObject playerObj = null;
 
     private GameObject boxTV1Obj = null;
@@ -382,14 +386,10 @@ public class ArenaGame : MonoBehaviour
         //   SaveDataToMem();
         //   SaveData();
 
-
-    }
-
-    public void FixedUpdate()
-    {
-
         //this.updates += 1;
         //print(sharedmovement.moveX);
+        
+        //Handle keystrokes
         if (Input.GetKey(KeyCode.Escape))
         {
             keyEscapePressed = 1;
@@ -438,67 +438,92 @@ public class ArenaGame : MonoBehaviour
             }
 
         }
-        else if (Input.GetKey(KeyCode.R))
+        else if (Input.GetKeyUp(KeyCode.R))
         {
             resetPostion = true;
             presetPositionNumber = 0;
         }
-        else if (Input.GetKey(KeyCode.Q))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             resetPostion = true;
             presetPositionNumber = 2;
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKeyUp(KeyCode.W))
         {
             resetPostion = true;
             presetPositionNumber = 3;
         }
-        else if (Input.GetKey(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             resetPostion = true;
             presetPositionNumber = 1;
         }
-        else if (Input.GetKey(KeyCode.T))
+        else if (Input.GetKeyUp(KeyCode.T))
         {
             resetPostion = true;
             presetPositionNumber = 4;
         }
-        else if (Input.GetKey(KeyCode.Y))
+        else if (Input.GetKeyUp(KeyCode.Y))
         {
             resetPostion = true;
             presetPositionNumber = 5;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             resetPostion = true;
             presetPositionNumber = 6;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
             resetPostion = true;
             presetPositionNumber = 7;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             resetPostion = true;
             presetPositionNumber = 8;
         }
-        else if (Input.GetKey(KeyCode.F))
+        else if (Input.GetKeyUp(KeyCode.F))
         {
             resetPostion = true;
             presetPositionNumber = 9;
         }
-        else if (Input.GetKey(KeyCode.Z))
+        else if (Input.GetKeyUp(KeyCode.Z))
         {
             rotationDirection = -1.0f;
             doRotation = true;
         }
-        else if (Input.GetKey(KeyCode.X))
+        else if (Input.GetKeyUp(KeyCode.X))
         {
             rotationDirection = 1.0f;
             doRotation = true;
         }
-        else if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Comma))
+        {
+            alterRotationalSpeed = true;
+            alterationDirection = -1.0f;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.Period))
+        {
+            alterRotationalSpeed = true;
+            alterationDirection = 1.0f;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftBracket))
+        {
+            alterLinearSpeed = true;
+            alterationDirection = -1.0f;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.RightBracket))
+        {
+            alterLinearSpeed = true;
+            alterationDirection = 1.0f;
+
+        }
+
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
             //Give Reward;
             serialArena.GiveJuice();
@@ -506,7 +531,16 @@ public class ArenaGame : MonoBehaviour
 
         }
 
-        else if (Time.time > timeToEndTrial)
+
+
+    }
+
+    public void FixedUpdate()
+    {
+
+        
+
+        if (Time.time > timeToEndTrial)
         {
 
 

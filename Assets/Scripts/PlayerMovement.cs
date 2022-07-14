@@ -67,6 +67,19 @@ public class PlayerMovement : MonoBehaviour
     public SteamVR_Behaviour_Pose controllerPose;
 
 
+    const float minRotSpeed = 30.0f;
+    const float maxRotSpeed = 120.0f;
+    const float stepRotSpeed = 10.0f;
+
+    const float minTimeTravel = 0.5f;
+    const float maxTimeTravel = 12.0f;
+    const float stepLinSpeed = 0.5f;
+
+    const float distanceToTravel = 6.0f;
+
+
+
+
     // Start is called before the first frame update
 
     void Awake()
@@ -133,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         //tomkil movementMultiplier = 12.0f / TravelTime;
-        movementMultiplier = 6f / TravelTime;
+        movementMultiplier = distanceToTravel / TravelTime;
         //movementMultiplier = 1.5f;
         // 5.25 second to travel 2R of polygon
         // Travel time = 4 (sec desired travel time for 2R);
@@ -243,6 +256,31 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case ArenaGame.TrainingMode.None:
+
+                if (ArenaGame.theArenaGame.alterRotationalSpeed==true)
+                {
+                    RotSpeed = RotSpeed + ArenaGame.theArenaGame.alterationDirection * stepRotSpeed;
+                    if (RotSpeed > maxRotSpeed)
+                        RotSpeed = maxRotSpeed;
+                    else if (RotSpeed < minRotSpeed)
+                        RotSpeed = minRotSpeed;
+                    ArenaGame.theArenaGame.alterRotationalSpeed = false;
+                }
+
+
+                if (ArenaGame.theArenaGame.alterLinearSpeed == true)
+                {
+                    TravelTime = TravelTime + ArenaGame.theArenaGame.alterationDirection * stepLinSpeed;
+                    if (TravelTime > maxTimeTravel)
+                        TravelTime = maxTimeTravel;
+                    else if (TravelTime < minTimeTravel)
+                        TravelTime = minTimeTravel;
+
+                    movementMultiplier = distanceToTravel / TravelTime;
+
+                    ArenaGame.theArenaGame.alterLinearSpeed = false;
+                }
+
 
                 if (ArenaGame.theArenaGame.doRotation==true)
                 {
