@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         public float locHeading;
     }
 
-    Location[] preSetLocations = new Location[10];
+    Location[] preSetLocations = new Location[12];
 
     
     
@@ -58,9 +58,16 @@ public class PlayerMovement : MonoBehaviour
     private int ArenaJoysticMode;
     
     private bool inBackwardMode = false;
+    private bool inRestInterval = false;
     
     private float startTimeMovingBack;
     private float durationBackMoveToGetReward;
+
+    private float timeNow;
+
+    private float startTimeRestInterval;
+    private float durationRestInterval;
+
 
     public static PlayerMovement sharedmovement;
 
@@ -99,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         preSetLocations[3].locPos = new Vector3(-2.09f, 0.6f, 1.22f);
         preSetLocations[3].locHeading = 133.0f;
 
-        // Position E max distance infron of TV1
+        // Position 1 max distance infron of TV1
         preSetLocations[1].locPos = new Vector3(0.145f, 0.6f, 2.42190f);
         preSetLocations[1].locHeading = -179.0f;
 
@@ -132,8 +139,19 @@ public class PlayerMovement : MonoBehaviour
         preSetLocations[9].locPos = new Vector3(-0.09f, 0.6f, -2.23f);
         preSetLocations[9].locHeading = 179.9f;
 
+        // Position 2 max distance infron of TV2
+        preSetLocations[10].locPos = new Vector3(-2.00f, 0.6f, -1.29f);
+        preSetLocations[10].locHeading = 60.0f;
+
+        //Position 3 infront of TV3 into the active area
+        preSetLocations[11].locPos = new Vector3(2.1f, 0.6f, -1.16f);
+        preSetLocations[11].locHeading = -60.0f;
+
+
+
         // ATTN:  ArenaBackMoveDuration is in ms
         durationBackMoveToGetReward = PlayerPrefs.GetFloat("ArenaBackMoveDuration", 300.0f)/1000.0f;
+        durationRestInterval = PlayerPrefs.GetFloat("ArenaBackMoveRestInterval", 1200.0f) / 1000.0f;
 
 
 
@@ -392,34 +410,53 @@ public class PlayerMovement : MonoBehaviour
             //rev effective_Y = -moveX;
         }
 
-        if (inBackwardMode == true)
+        if (PlayerPrefs.GetInt("ArenaEnableBackMoveRew", 0) == 1)
         {
-            if (moveX < 0.0f)
+            timeNow = Time.time;
+
+            if (inRestInterval != true)
             {
-                // check duration
-                if (Time.time - startTimeMovingBack > durationBackMoveToGetReward)
+
+
+                if (inBackwardMode == true)
                 {
-                    serialArena.GiveJuice();
-                    Debug.Log("["+Time.time.ToString("F3")+"] BACKWARD Move Reward Given!");
-                    inBackwardMode = false;
+                    if (moveX < 0.0f)
+                    {
+                        // check duration
+                        if (timeNow - startTimeMovingBack > durationBackMoveToGetReward)
+                        {
+                            serialArena.GiveJuice();
+                            Debug.Log("[" + timeNow.ToString("F3") + "] BACKWARD Move Reward Given!");
+                            inBackwardMode = false;
+                            inRestInterval = true;
+                            startTimeRestInterval = timeNow;
+                        }
+                    }
+                    else
+                    {
+                        //reset flag
+                        inBackwardMode = false;
+                    }
+                }
+                else
+                {
+                    if (moveX < 0.0f && inRestInterval == false)
+                    {
+                        inBackwardMode = true;
+                        startTimeMovingBack = Time.time;
+
+                    }
                 }
             }
             else
             {
-                //reset flag
-                inBackwardMode = false;
+                if (timeNow - startTimeRestInterval > durationRestInterval)
+                    inRestInterval = false;
             }
-        }
-        else
-        {
-            if (moveX<0.0f)
-            {
-                inBackwardMode = true;
-                startTimeMovingBack = Time.time;
+            
 
-            }
-        }
 
+        }
         //moveDirection = orientation.forward * moveY + orientation.right * moveX;
 
         moveDirection = orientation.forward * effective_Y + orientation.right * effective_X;

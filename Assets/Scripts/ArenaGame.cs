@@ -453,10 +453,20 @@ public class ArenaGame : MonoBehaviour
             resetPostion = true;
             presetPositionNumber = 3;
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             resetPostion = true;
             presetPositionNumber = 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            resetPostion = true;
+            presetPositionNumber = 10;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            resetPostion = true;
+            presetPositionNumber = 11;
         }
         else if (Input.GetKeyUp(KeyCode.T))
         {
