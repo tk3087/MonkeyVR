@@ -292,6 +292,7 @@ public class PlayerMovement : MonoBehaviour
                     rb.MoveRotation(rb.rotation * deltaRotation);
                     
                     ArenaGame.theArenaGame.doRotation = false;
+                    return;
                 }
 
                 if (ArenaGame.theArenaGame.resetPostion == true)

@@ -488,16 +488,7 @@ public class ArenaGame : MonoBehaviour
             resetPostion = true;
             presetPositionNumber = 9;
         }
-        else if (Input.GetKeyUp(KeyCode.Z))
-        {
-            rotationDirection = -1.0f;
-            doRotation = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.X))
-        {
-            rotationDirection = 1.0f;
-            doRotation = true;
-        }
+        
         else if (Input.GetKeyUp(KeyCode.Comma))
         {
             alterRotationalSpeed = true;
@@ -530,6 +521,7 @@ public class ArenaGame : MonoBehaviour
             Debug.Log("[" + Time.time.ToString("F3") + "] MANUALLY given reward");
 
         }
+       
 
 
 
@@ -538,9 +530,17 @@ public class ArenaGame : MonoBehaviour
     public void FixedUpdate()
     {
 
-        
-
-        if (Time.time > timeToEndTrial)
+        if (Input.GetKey(KeyCode.Z))
+        {
+            rotationDirection = -1.0f;
+            doRotation = true;
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            rotationDirection = 1.0f;
+            doRotation = true;
+        }
+        else if (Time.time > timeToEndTrial)
         {
 
 
