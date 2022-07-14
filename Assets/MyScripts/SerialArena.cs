@@ -55,9 +55,9 @@ public class SerialArena : MonoBehaviour
 
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
-
-            var keyboard = Keyboard.current;
-            if (keyboard.spaceKey.isPressed && juice) GiveJuice();
+            // Juice manually given at main keyboard controller 
+            //var keyboard = Keyboard.current;
+            //if (keyboard.spaceKey.isPressed && juice) GiveJuice();
             try
             {
                 inString = sp.ReadLine();
