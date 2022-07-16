@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         public float locHeading;
     }
 
-    Location[] preSetLocations = new Location[12];
+    Location[] preSetLocations = new Location[14];
 
     
     
@@ -85,7 +85,12 @@ public class PlayerMovement : MonoBehaviour
     const float distanceToTravel = 6.0f;
 
 
+    //
 
+    public AudioSource audioSource;
+    public AudioClip winSound;
+    public AudioClip alarmSound;
+    public AudioClip unconfortSound;
 
     // Start is called before the first frame update
 
@@ -143,13 +148,20 @@ public class PlayerMovement : MonoBehaviour
         preSetLocations[10].locPos = new Vector3(-2.00f, 0.6f, -1.29f);
         preSetLocations[10].locHeading = 60.0f;
 
-        //Position 3 infront of TV3 into the active area
+        //Position 3 max distance infront of TV3 
         preSetLocations[11].locPos = new Vector3(2.1f, 0.6f, -1.16f);
         preSetLocations[11].locHeading = -60.0f;
 
 
+        //Position 5 infront of TV2 into the active area
+        preSetLocations[12].locPos = new Vector3(2.04f, 0.6f, 1.21f);
+        preSetLocations[12].locHeading = 60.0f;
 
-        // ATTN:  ArenaBackMoveDuration is in ms
+        //Position 6 infront of TV3 into the active area
+        preSetLocations[13].locPos = new Vector3(-2.15f, 0.6f, 1.23f);
+        preSetLocations[13].locHeading = -60.0f;
+
+        // ATTN:  Duration is in ms
         durationBackMoveToGetReward = PlayerPrefs.GetFloat("ArenaBackMoveDuration", 300.0f)/1000.0f;
         durationRestInterval = PlayerPrefs.GetFloat("ArenaBackMoveRestInterval", 1200.0f) / 1000.0f;
 
@@ -345,6 +357,7 @@ public class PlayerMovement : MonoBehaviour
 
                 
 
+
                 if (moveX < 0.0f)
                 {
                     moveX += 1.0f;
@@ -410,8 +423,17 @@ public class PlayerMovement : MonoBehaviour
             //rev effective_Y = -moveX;
         }
 
-        if (PlayerPrefs.GetInt("ArenaEnableBackMoveRew", 0) == 1)
+        if (ArenaGame.theArenaGame.FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED == false)
         {
+            if (effective_Y > 0.0)
+                effective_Y = 0.0f;
+        }
+        if (ArenaGame.theArenaGame.BACKWARD_MOVEMENT_REWARD_ENABLED == true)
+        {
+            // ATTN:  Duration is in ms
+            durationBackMoveToGetReward = PlayerPrefs.GetFloat("ArenaBackMoveDuration", 300.0f) / 1000.0f;
+            durationRestInterval = PlayerPrefs.GetFloat("ArenaBackMoveRestInterval", 1200.0f) / 1000.0f;
+            
             timeNow = Time.time;
 
             if (inRestInterval != true)
@@ -463,7 +485,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         rb.AddForce(moveDirection.normalized * movementMultiplier * 0.2f, ForceMode.Force);
-        /*
+        /* Block this part to get analog movement
         if (moveX < 0.5f && moveX > -0.5f)
         {
             moveX = 0f;

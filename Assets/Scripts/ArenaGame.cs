@@ -152,6 +152,10 @@ public class ArenaGame : MonoBehaviour
 
     public bool ARENA_INITIALIZED = false;
 
+    public bool BACKWARD_MOVEMENT_REWARD_ENABLED;
+
+    public bool FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
+
     public enum TrainingMode
     { None, ScreenFront, ScreenStraight }
 
@@ -226,6 +230,12 @@ public class ArenaGame : MonoBehaviour
 
 
         ArenaJoysticMode = PlayerPrefs.GetInt("ArenaJoystickMode", 0);
+
+        if (PlayerPrefs.GetInt("ArenaEnableBackMoveRew", 0) == 1)
+            BACKWARD_MOVEMENT_REWARD_ENABLED = true;
+        else
+            BACKWARD_MOVEMENT_REWARD_ENABLED = false;
+            
 
 
     }
@@ -388,7 +398,7 @@ public class ArenaGame : MonoBehaviour
 
         //this.updates += 1;
         //print(sharedmovement.moveX);
-        
+
         //Handle keystrokes
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -493,12 +503,22 @@ public class ArenaGame : MonoBehaviour
             resetPostion = true;
             presetPositionNumber = 8;
         }
-        else if (Input.GetKeyUp(KeyCode.F))
+        else if (Input.GetKeyUp(KeyCode.Alpha4))
         {
             resetPostion = true;
             presetPositionNumber = 9;
         }
-        
+
+        else if (Input.GetKeyUp(KeyCode.Alpha5))
+        {
+            resetPostion = true;
+            presetPositionNumber = 12;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha6))
+        {
+            resetPostion = true;
+            presetPositionNumber = 13;
+        }
         else if (Input.GetKeyUp(KeyCode.Comma))
         {
             alterRotationalSpeed = true;
@@ -514,13 +534,13 @@ public class ArenaGame : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.LeftBracket))
         {
             alterLinearSpeed = true;
-            alterationDirection = -1.0f;
+            alterationDirection = 1.0f;
 
         }
         else if (Input.GetKeyUp(KeyCode.RightBracket))
         {
             alterLinearSpeed = true;
-            alterationDirection = 1.0f;
+            alterationDirection = -1.0f;
 
         }
 
@@ -531,7 +551,45 @@ public class ArenaGame : MonoBehaviour
             Debug.Log("[" + Time.time.ToString("F3") + "] MANUALLY given reward");
 
         }
-       
+        else if (Input.GetKeyUp(KeyCode.Backslash))
+        {
+            // Toggle flag
+            //BACKWARD_MOVEMENT_REWARD_ENABLED = BACKWARD_MOVEMENT_REWARD_ENABLED ? false : true;
+            if (BACKWARD_MOVEMENT_REWARD_ENABLED==true)
+            {
+                Debug.Log("BACKWARD Movement reward disabled.");
+                BACKWARD_MOVEMENT_REWARD_ENABLED = false;
+            }
+            else
+            {
+                Debug.Log("BACKWARD Movement reward enabled.");
+                BACKWARD_MOVEMENT_REWARD_ENABLED = true;
+            }
+        }
+
+
+        
+        else if (Input.GetKeyUp(KeyCode.Slash))
+        {
+            // Toggle flag;
+            if (FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED==true)
+            {
+                Debug.Log("FORWARD  Movement on wall collision disabled.");
+                FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED  = false;
+            }
+            else
+            {
+                Debug.Log("FORWARD  Movement on wall collision enabled.");
+                FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.BackQuote))
+        {
+
+            //Play alarm sound
+            sharedmovement.audioSource.clip = sharedmovement.alarmSound;
+            sharedmovement.audioSource.Play();
+        }
 
 
 
