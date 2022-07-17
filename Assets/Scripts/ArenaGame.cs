@@ -156,6 +156,8 @@ public class ArenaGame : MonoBehaviour
 
     public bool FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
 
+    public bool COLLISION_HANDLER_ENABLED = false;
+
     public enum TrainingMode
     { None, ScreenFront, ScreenStraight }
 
@@ -235,14 +237,18 @@ public class ArenaGame : MonoBehaviour
             BACKWARD_MOVEMENT_REWARD_ENABLED = true;
         else
             BACKWARD_MOVEMENT_REWARD_ENABLED = false;
-            
 
 
-    }
 
-    // Start is called before the first frame update
+        FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
 
-    void Start()
+        COLLISION_HANDLER_ENABLED = false;
+
+}
+
+// Start is called before the first frame update
+
+void Start()
     {
 
 
@@ -589,6 +595,21 @@ public class ArenaGame : MonoBehaviour
             //Play alarm sound
             sharedmovement.audioSource.clip = sharedmovement.alarmSound;
             sharedmovement.audioSource.Play();
+        }
+        else if (Input.GetKeyUp(KeyCode.C))
+        {
+            // Toggle flag;
+            if (COLLISION_HANDLER_ENABLED == true)
+            {
+                Debug.Log("COLLISION Handler disabled.");
+                COLLISION_HANDLER_ENABLED  = false;
+            }
+            else
+            {
+                Debug.Log("COLLISION Handler enabled.");
+                COLLISION_HANDLER_ENABLED = true;
+            }
+
         }
 
 

@@ -21,6 +21,10 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (ArenaGame.theArenaGame.COLLISION_HANDLER_ENABLED == false)
+            return;
+
         if (collision.gameObject.name == "ProxZone")
         {
             // 
@@ -56,8 +60,10 @@ public class CollisionHandler : MonoBehaviour
         //    sharedmovement.audioSource.clip = sharedmovement.loseSound;
         //    sharedmovement.audioSource.Play();
         //}
-          
-        
+        if (ArenaGame.theArenaGame.COLLISION_HANDLER_ENABLED == false)
+            return;
+
+
         if (IN_PROX_ZONE==true)
         {
             // IF in ProxZone
@@ -171,6 +177,9 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
+        if (ArenaGame.theArenaGame.COLLISION_HANDLER_ENABLED == false)
+            return;
+
         Debug.Log("CollisionExit: " + collision.gameObject.name);
 
         if (collision.gameObject.name == "ProxZone")
