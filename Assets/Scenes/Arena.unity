@@ -21587,14 +21587,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 577780768}
-  movementMultiplier: 0.8
+  movementMultiplier: 1.5
   moveX: 0
   moveY: 0
   press: 0
   randomHeadingOnReset: 0
   currentSpeed: 0
   currentRot: 0
-  TravelTime: 7.5
+  TravelTime: 4
   RotSpeed: 120
   controllerPose: {fileID: 0}
   audioSource: {fileID: 2076901961}
