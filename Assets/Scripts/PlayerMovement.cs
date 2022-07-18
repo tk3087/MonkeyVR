@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         public float locHeading;
     }
 
-    Location[] preSetLocations = new Location[14];
+    Location[] preSetLocations = new Location[16];
 
     
     
@@ -121,8 +121,8 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Position T viewing TV1 and TV2
-        preSetLocations[4].locPos = new Vector3(-2.654f, 0.6f, 0.246f);
-        preSetLocations[4].locHeading = 112.5f;
+        preSetLocations[4].locPos = new Vector3(-2.3f, 0.6f, 1.24f);
+        preSetLocations[4].locHeading = 122.0f;
 
         //Position Y at the center viewing the Wall between TV1 and TV2
         preSetLocations[5].locPos = new Vector3(0.01f, 0.6f, 0.01f);
@@ -160,6 +160,15 @@ public class PlayerMovement : MonoBehaviour
         //Position 6 infront of TV3 into the active area
         preSetLocations[13].locPos = new Vector3(-2.15f, 0.6f, 1.23f);
         preSetLocations[13].locHeading = -60.0f;
+
+        //Position T viewing TV2 and TV3
+        preSetLocations[14].locPos = new Vector3(0.02f, 0.6f, -2.63f);
+        preSetLocations[14].locHeading = 3.0f;
+        
+        //Position T viewing TV3 and TV1
+        preSetLocations[15].locPos = new Vector3(2.23f, 0.6f, 1.29f);
+        preSetLocations[15].locHeading = -122.0f;
+
 
         // ATTN:  Duration is in ms
         durationBackMoveToGetReward = PlayerPrefs.GetFloat("ArenaBackMoveDuration", 300.0f)/1000.0f;

@@ -21652,6 +21652,7 @@ MonoBehaviour:
   ARENA_INITIALIZED: 0
   BACKWARD_MOVEMENT_REWARD_ENABLED: 0
   FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED: 0
+  COLLISION_HANDLER_ENABLED: 0
   ArenaTrainigMode: 0
 --- !u!114 &2076901959
 MonoBehaviour:
@@ -21684,6 +21685,7 @@ MonoBehaviour:
   dot1: 0
   dot2: 0
   IN_PROX_ZONE: 0
+  gracePeriodToBlockForwardMovement: 3
 --- !u!82 &2076901961
 AudioSource:
   m_ObjectHideFlags: 0

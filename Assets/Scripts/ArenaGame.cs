@@ -489,6 +489,16 @@ void Start()
             resetPostion = true;
             presetPositionNumber = 4;
         }
+        else if (Input.GetKeyUp(KeyCode.G))
+        {
+            resetPostion = true;
+            presetPositionNumber = 14;
+        }
+        else if (Input.GetKeyUp(KeyCode.B))
+        {
+            resetPostion = true;
+            presetPositionNumber = 15;
+        }
         else if (Input.GetKeyUp(KeyCode.Y))
         {
             resetPostion = true;
