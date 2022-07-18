@@ -103,14 +103,14 @@ public class GoToScene : MonoBehaviour
 
     public void ToSettings()
     {
-        //mainMenuArena.enabled = false;
-        //settingsMenuArena.enabled = true;
+        mainMenu.enabled = false;
+        settingsMenu.enabled = true;
     }
 
     public void ToMain()
     {
-        //mainMenuArena.enabled = true;
-        //settingsMenuArena.enabled = false;
+        mainMenu.enabled = true;
+        settingsMenu.enabled = false;
     }
 
     public void Save()
