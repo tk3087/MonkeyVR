@@ -161,13 +161,13 @@ public class PlayerMovement : MonoBehaviour
         preSetLocations[13].locPos = new Vector3(-2.15f, 0.6f, 1.23f);
         preSetLocations[13].locHeading = -60.0f;
 
-        //Position T viewing TV2 and TV3
+        //Position B viewing TV2 and TV3
         preSetLocations[14].locPos = new Vector3(0.02f, 0.6f, -2.63f);
         preSetLocations[14].locHeading = 3.0f;
         
-        //Position T viewing TV3 and TV1
+        //Position G viewing TV3 and TV1
         preSetLocations[15].locPos = new Vector3(2.23f, 0.6f, 1.29f);
-        preSetLocations[15].locHeading = -122.0f;
+        preSetLocations[15].locHeading = -118.0f;
 
 
         // ATTN:  Duration is in ms
