@@ -334,6 +334,20 @@ public class PlayerMovement : MonoBehaviour
                     return;
                 }
 
+                if (ArenaGame.theArenaGame.doTranslation == true)
+                {
+
+                    //currentRot = ArenaGame.theArenaGame.rotationDirection * RotSpeed;
+                    moveDirection = orientation.forward * ArenaGame.theArenaGame.translationDirection;
+
+                    currentSpeed = ArenaGame.theArenaGame.translationDirection * movementMultiplier;
+                    
+                    rb.MovePosition(transform.position + transform.forward * currentSpeed * Time.deltaTime);
+
+                    ArenaGame.theArenaGame.doTranslation = false;
+                    return;
+                }
+
                 if (ArenaGame.theArenaGame.resetPostion == true)
                 {
                     

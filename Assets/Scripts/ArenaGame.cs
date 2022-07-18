@@ -30,6 +30,10 @@ public class ArenaGame : MonoBehaviour
     public bool doRotation = false;
     public float rotationDirection;
 
+    public bool doTranslation = false;
+    public float translationDirection;
+
+
     public bool alterRotationalSpeed = false;
     public bool alterLinearSpeed = false;
     public float alterationDirection;
@@ -438,7 +442,7 @@ void Start()
 
             }
         }
-        else if (Input.GetKey("["))
+        else if (Input.GetKey("*"))
         {
             keyEscapePressed = 0;
             if (PlayerPrefs.GetInt("ArenaMode") == 1)
@@ -629,16 +633,28 @@ void Start()
     public void FixedUpdate()
     {
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             rotationDirection = -1.0f;
             doRotation = true;
         }
-        else if (Input.GetKey(KeyCode.X))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             rotationDirection = 1.0f;
             doRotation = true;
         }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            translationDirection = 1.0f;
+            doTranslation = true;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            translationDirection = -1.0f;
+            doTranslation = true;
+        }
+    
+
         else if (Time.time > timeToEndTrial)
         {
 
