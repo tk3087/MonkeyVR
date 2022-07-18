@@ -192,12 +192,18 @@ public class CollisionHandler : MonoBehaviour
         if (collision.gameObject.name == "Rod8T" && hit_TW == true)
         {
             this.hit_TW = false;
-            
+            ArenaGame.theArenaGame.FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
+            Debug.Log("Col Exit TW: Forward Movement ENABLED.");
+
+
         }
         else if (collision.gameObject.name == "Rod8W" && hit_EW == true)
         {
             this.hit_EW = false;
-            
+            ArenaGame.theArenaGame.FORWARD_MOVEMENT_ON_WALL_COLLISION_ENABLED = true;
+            Debug.Log("Col exit EW: Forward Movement ENABLED.");
+
+
         }
 
     }
