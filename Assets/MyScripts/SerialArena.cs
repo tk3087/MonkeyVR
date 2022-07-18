@@ -117,6 +117,20 @@ public class SerialArena : MonoBehaviour
         }
     }
 
+    async public void SendRandomPulse()
+    {
+        int rewardPulse = -50; // Arduino trnslates
+        if (PlayerPrefs.GetInt("ArenaMode") == 1)
+        {
+
+            //print(string.Format("juice time = {0}", juiceTime));
+            
+            sp.Write(string.Format("{0}", rewardPulse));
+            await new WaitForSeconds(rewardPulse / 1000.0f);
+            ;
+        }
+    }
+
     private void SerialDataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
     {
         SerialPort _sp = (SerialPort) sender;

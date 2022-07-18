@@ -44,6 +44,7 @@ namespace PupilLabs
         bool flagMultiFF = false;
         bool flagRecording = false;
         double timeProgStart = 0.0f;
+        int randomPulse = 0;
         [HideInInspector] public Vector3 gazeDirMod;
         [HideInInspector] public float xScale = 1f;
         [HideInInspector] public float yScale = 1f;
@@ -68,7 +69,7 @@ namespace PupilLabs
                 sb.Append("time_stamp,pos_x,pos_y,pos_z,rot_x,rot_y,rot_z," +
                 "b1_press,b1_rew,b1_time,b1_time_next_rew,b2_press,b2_rew,b2_time,b2_time_next_rew,b3_press,b3_rew,b3_time,b3_time_next_rew," +
                 "Mapping_Context,Confidence,Target_Index, Mode, GazeX, GazeY, GazeZ, Gaze_Distance, CenterRX, CenterRY, CenterRZ, CenterLX, CenterLY, CenterLZ," +
-                "NormRX, NormRY, NormRZ, NormLX, NormLY, NormLZ, Marker\n");
+                "NormRX, NormRY, NormRZ, NormLX, NormLY, NormLZ, Marker, JoyMoveX, JoyMoveY, RndPulse\n");
             
             }
 
@@ -156,11 +157,20 @@ namespace PupilLabs
                     }
                     
                     flagRecording = true;
-                    
+
+                    // Generate random pulse (uniform)
+                    if (UnityEngine.Random.value < 0.5f)
+                    {
+                        randomPulse = 1;
+                        ArenaGame.theArenaGame.theSerialPort.SendRandomPulse();
+                    }
+                    else
+                        randomPulse = 0;
+
                     //was Time.realtimeSinceStartup
                     sbPacket = string.Format("{0},{1},{2},{3},{4},{5},{6}," +
                                 "{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18}," +
-                                "{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30}\n",
+                                "{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33}\n",
                                 (double)Time.time,
                                 sharedmovement.transform.position.x,
                                 sharedmovement.transform.position.y,
@@ -191,7 +201,12 @@ namespace PupilLabs
                                 gazeDataNow.GazeNormal0.ToString("F5").Trim('(', ')').Replace(" ", ""),
                                 gazeDataNow.GazeNormal1.ToString("F5").Trim('(', ')').Replace(" ", ""),
                                 calibrationController.LastMarker,
-                                calibrationController.status);
+                                calibrationController.status,
+                                sharedmovement.moveX,
+                                sharedmovement.moveY,
+                                randomPulse
+                                
+                                );
 
                     sb.Append(sbPacket);
                 }

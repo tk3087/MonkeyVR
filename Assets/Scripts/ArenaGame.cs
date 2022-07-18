@@ -167,6 +167,7 @@ public class ArenaGame : MonoBehaviour
 
     public TrainingMode ArenaTrainigMode = TrainingMode.None;
 
+    public SerialArena theSerialPort = serialArena;
 
     // This script acts as the Main Manager tk
     private void Awake()
