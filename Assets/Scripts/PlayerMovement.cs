@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
         //movementMultiplier = 1.5f;
         // 5.25 second to travel 2R of polygon
         // Travel time = 4 (sec desired travel time for 2R);
-        PlayerPrefs.SetFloat("MovementMultiplier", movementMultiplier);
+         PlayerPrefs.SetFloat("MovementMultiplier", movementMultiplier);
 
         float initialPlayerRot = 0;
         Vector3 initialPosition = new Vector3(0.0f, 0.2f, 0.0f);
@@ -470,7 +470,8 @@ public class PlayerMovement : MonoBehaviour
                         // check duration
                         if (timeNow - startTimeMovingBack > durationBackMoveToGetReward)
                         {
-                            serialArena.GiveJuice();
+                            //serialArena.GiveJuice();
+                            ArenaGame.theArenaGame.GIVE_REWARD = true;
                             Debug.Log("[" + timeNow.ToString("F3") + "] BACKWARD Move Reward Given!");
                             inBackwardMode = false;
                             inRestInterval = true;

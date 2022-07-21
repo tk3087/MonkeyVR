@@ -2,6 +2,7 @@
 using System.IO.Ports;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static ArenaGame;
 
 public class SerialArena : MonoBehaviour
 {
@@ -35,29 +36,36 @@ public class SerialArena : MonoBehaviour
 
             ComPort = PlayerPrefs.GetString("ArenaComPort", "COM5");
             juiceTime = PlayerPrefs.GetFloat("Max Juice Time");
-            sp = new SerialPort(ComPort, 1000000);
+            sp = new SerialPort(ComPort, 115200);
+            
             //sp.DataReceived+= new SerialDataReceivedEventHandler (SerialDataReceivedHandler);
             //sp.DtrEnable = true;
             //sp.RtsEnable = true;
             //sp.Handshake = Handshake.None;
             sp.Open();
             sp.ReadTimeout = 1;
+            
 
             validSuctionDuration = (ulong)PlayerPrefs.GetInt("SuctionDuration");
         }
     }
-   
-   
+
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
             // Juice manually given at main keyboard controller 
             //var keyboard = Keyboard.current;
             //if (keyboard.spaceKey.isPressed && juice) GiveJuice();
+
+
+              
+            
+
             try
             {
                 inString = sp.ReadLine();
@@ -71,8 +79,13 @@ public class SerialArena : MonoBehaviour
                 tNow = ulong.Parse(tokens[0]);
                 vacSwitch = char.Parse(tokens[1]);
 
+             
+
             }
 
+
+
+           
             if (vacSwitch == '0')
             {
                 if (inSuction == false)
@@ -96,24 +109,38 @@ public class SerialArena : MonoBehaviour
                     inSuction = false;
                 }
             }
+            
+            //Vaccum Switch End
 
+            if (ArenaGame.theArenaGame.GIVE_REWARD == true)
+            {
+                GiveJuice();
+                ArenaGame.theArenaGame.GIVE_REWARD = false;
+            }
         }
 
 
         
 
     }
+    public void GiveManJuice()
+    {
+        sp.Write(string.Format("{0}", juiceTime));
+        new WaitForSeconds(juiceTime / 1000.0f);
 
+
+    }
     async public void GiveJuice()
     {
         if (PlayerPrefs.GetInt("ArenaMode") == 1)
         {
 
             //print(string.Format("juice time = {0}", juiceTime));
-            juice = false;
+            //juice = false;
             sp.Write(string.Format("{0}", juiceTime));
             await new WaitForSeconds(juiceTime / 1000.0f);
-            juice = true;
+            //await new WaitForSeconds(1 / 1000.0f);
+            //juice = true;
         }
     }
 
@@ -126,7 +153,7 @@ public class SerialArena : MonoBehaviour
             //print(string.Format("juice time = {0}", juiceTime));
             
             sp.Write(string.Format("{0}", rewardPulse));
-            await new WaitForSeconds(rewardPulse / 1000.0f);
+            await new WaitForSeconds(-rewardPulse / 1000.0f);
             ;
         }
     }

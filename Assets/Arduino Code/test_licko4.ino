@@ -28,7 +28,8 @@ pinMode(14, INPUT_PULLUP); //External Reward Switch
 pinMode(11, OUTPUT); // 
 pinMode(12, OUTPUT); //Random Pulse
 
-Serial.begin(19200);
+Serial.begin(115200);
+
 digitalWrite(11,LOW);
 
 }
@@ -128,6 +129,7 @@ void loop() {
   //>>> 
   outString = (String) timestamp+","+(String) val ; 
   Serial.println(outString);
+  Serial.flush();
   //Serial.println((String)len+","+(String)lick_duration);
   delay(10);
 }

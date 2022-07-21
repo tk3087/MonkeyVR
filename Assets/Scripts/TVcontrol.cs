@@ -409,7 +409,8 @@ public class TVcontrol : MonoBehaviour
                 audioSource.clip = winSound;
                 audioSource.Play();
 
-                serialArena.GiveJuice();
+                //serialArena.GiveJuice();
+                ArenaGame.theArenaGame.GIVE_REWARD = true;
 
             }
             else

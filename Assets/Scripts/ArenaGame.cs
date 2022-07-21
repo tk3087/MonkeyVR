@@ -162,6 +162,8 @@ public class ArenaGame : MonoBehaviour
 
     public bool COLLISION_HANDLER_ENABLED = false;
 
+    public bool GIVE_REWARD = false;
+
     public enum TrainingMode
     { None, ScreenFront, ScreenStraight }
 
@@ -568,7 +570,8 @@ void Start()
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             //Give Reward;
-            serialArena.GiveJuice();
+            //serialArena.GiveManJuice();
+            GIVE_REWARD = true;
             Debug.Log("[" + Time.time.ToString("F3") + "] MANUALLY given reward");
 
         }
