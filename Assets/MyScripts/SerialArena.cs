@@ -112,11 +112,18 @@ public class SerialArena : MonoBehaviour
             
             //Vaccum Switch End
 
-            if (ArenaGame.theArenaGame.GIVE_REWARD == true)
+
+            // ATTN Serial Object should be initialized in Arena Scene no need to be enabled while on menu scene 
+            // for the time just check if pointer initialized
+            if (ArenaGame.theArenaGame != null)
             {
-                GiveJuice();
-                ArenaGame.theArenaGame.GIVE_REWARD = false;
+                if (ArenaGame.theArenaGame.GIVE_REWARD == true)
+                {
+                    GiveJuice();
+                    ArenaGame.theArenaGame.GIVE_REWARD = false;
+                }
             }
+            
         }
 
 
