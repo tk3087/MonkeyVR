@@ -170,12 +170,13 @@ namespace PupilLabs
         }
         [HideInInspector] public Status status;
         readonly static List<int> order = new List<int>()
-        //{
-        //    3, 6, 7, 8, 5, 2, 1, 0, 3, 7, 5, 1, 0, 6, 8, 2, 4
-        //};
         {
-             2, 1, 0
+            3, 6, 7, 8, 5, 2, 1, 0, 3, 7, 5, 1, 0, 6, 8, 2, 4
         };
+        // tomkil ATTN 3 points only for debug speed up purpose should put #def DEBUG to alternate
+        //{
+        //     2, 1, 0
+        //};
     int autoIdx = 0;
 
         System.Random random = new System.Random();
