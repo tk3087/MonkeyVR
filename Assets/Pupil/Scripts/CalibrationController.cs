@@ -291,7 +291,7 @@ namespace PupilLabs
 
         private void Start()
         {
-            sp = serial.sp;
+            //sp = serial.sp;
 
             SceneManager.activeSceneChanged += OnSceneChange;
        

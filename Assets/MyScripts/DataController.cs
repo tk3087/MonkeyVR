@@ -162,7 +162,7 @@ namespace PupilLabs
                     if (UnityEngine.Random.value < 0.5f)
                     {
                         randomPulse = 1;
-                        ArenaGame.theArenaGame.theSerialPort.SendRandomPulse();
+                        //ArenaGame.theArenaGame.theSerialPort.SendRandomPulse();
                     }
                     else
                         randomPulse = 0;
